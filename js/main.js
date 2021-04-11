@@ -3,16 +3,13 @@
   function init() {
     Promise.all([
       d3.csv("data/occupancy.csv"),
-    //   d3.csv("data/permit.csv"),
-    //   d3.csv("data/demolition.csv"),
+      d3.csv("data/permits.csv"),
+      d3.csv("data/demolition.csv"),
     ]).then(function (files) {
-        var occupancyChart = new OccupancyChart(files[0]); 
+        var centralChart = new CentralChart(files[0], files[1], files[2]); 
+        // var costChart = new CostChart(files[0], files[1], files[2]); 
 
-        // var permitChart = new PermitChart(files[1]); 
-        // permitChart.update();
 
-        // var demolitionChart = new DemolitionChart(files[2]); 
-        // demolitionChart.update();
     });
   }
 

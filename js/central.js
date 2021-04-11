@@ -1,27 +1,24 @@
 
-function OccupancyChart(occupancyData, permitData, demolitionData){
+function CentralChart(occupancyData, permitData, demolitionData){
     let self = this;
     self.occupancyData = occupancyData;
     self.permitData = permitData;
     self.demolitionData = demolitionData;
-    console.log(self.occupancyData)
-    console.log(self.permitData)
-    console.log(self.demolitionData)
     self.init();
 };
 
-OccupancyChart.prototype.init = function(){
+CentralChart.prototype.init = function(){
     let self = this;
     self.margin = {top: 20, right: 175, bottom: 30, left: 175};
-    self.svgBounds = d3.select("#occupancy").node().getBoundingClientRect();
+    self.svgBounds = d3.select("#central").node().getBoundingClientRect();
     self.svgWidth = self.svgBounds.width - self.margin.left - self.margin.right;
     self.svgHeight = self.svgWidth/2;
     
 
-    const svg = d3.select("#occupancy").append("svg")
+    const svg = d3.select("#central").append("svg")
         .attr("width", 1200)
         .attr("height", 600)
-        .attr("class", "occupancy");
+        .attr("class", "central");
 
     var x = d3.scaleLinear()
         .domain(d3.extent(self.permitData, function(d) { return +d.YEAR; }))
@@ -50,7 +47,7 @@ OccupancyChart.prototype.init = function(){
         .y(function(d) { 
             return y(+d.TOTALNUMBER) 
         }))
-        .attr('transform', 'translate(' + 50 + ',' + 50 + ')') 
+        .attr("transform", "translate(50," + 0 + ")")
 
     svg.append("path")
       .datum(self.permitData)
@@ -64,7 +61,7 @@ OccupancyChart.prototype.init = function(){
         .y(function(d) { 
             return y(+d.TOTALNUMBER) 
         }))
-        .attr('transform', 'translate(' + 50 + ',' + 50 + ')') 
+        .attr("transform", "translate(50," + 0 + ")")
 
     svg.append("path")
       .datum(self.demolitionData)
@@ -78,5 +75,5 @@ OccupancyChart.prototype.init = function(){
         .y(function(d) { 
             return y(+d.TOTALNUMBER) 
         }))
-        .attr('transform', 'translate(' + 50 + ',' + 50 + ')')      
+        .attr("transform", "translate(50," + 0 + ")")
 }

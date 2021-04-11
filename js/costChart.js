@@ -1,5 +1,5 @@
 
-function OccupancyChart(occupancyData, permitData, demolitionData){
+function CentralChart(occupancyData, permitData, demolitionData){
     let self = this;
     self.occupancyData = occupancyData;
     self.permitData = permitData;
@@ -10,7 +10,7 @@ function OccupancyChart(occupancyData, permitData, demolitionData){
     self.init();
 };
 
-OccupancyChart.prototype.init = function(){
+CentralChart.prototype.init = function(){
     let self = this;
     self.margin = {top: 20, right: 175, bottom: 30, left: 175};
     self.svgBounds = d3.select("#occupancy").node().getBoundingClientRect();
@@ -27,14 +27,13 @@ OccupancyChart.prototype.init = function(){
         .domain(d3.extent(self.permitData, function(d) { return +d.YEAR; }))
         .range([ 0, 800 ]);
     svg.append("g")
-        .attr("transform", "translate(50," + 450 + ")")
+        .attr("transform", "translate(0," + 500 + ")")
         .call(d3.axisBottom(x));
 
     var y = d3.scaleLinear()
-        .domain([0, d3.max(self.permitData, function(d) { return +d.TOTALNUMBER; })])
+        .domain([0, d3.max(self.permitData, function(d) { return +d.TOTALVALUE; })])
         .range([ 450, 0 ]);
     svg.append("g")
-        .attr("transform", "translate(50," + 0 + ")")
         .call(d3.axisLeft(y));
 
     // Add the line
@@ -48,7 +47,7 @@ OccupancyChart.prototype.init = function(){
             return x(+d.YEAR) 
         })
         .y(function(d) { 
-            return y(+d.TOTALNUMBER) 
+            return y(+d.TOTALVALUE) 
         }))
         .attr('transform', 'translate(' + 50 + ',' + 50 + ')') 
 
@@ -62,7 +61,7 @@ OccupancyChart.prototype.init = function(){
             return x(+d.YEAR) 
         })
         .y(function(d) { 
-            return y(+d.TOTALNUMBER) 
+            return y(+d.TOTALVALUE) 
         }))
         .attr('transform', 'translate(' + 50 + ',' + 50 + ')') 
 
@@ -76,7 +75,8 @@ OccupancyChart.prototype.init = function(){
             return x(+d.YEAR) 
         })
         .y(function(d) { 
-            return y(+d.TOTALNUMBER) 
+            console.log(d);
+            return y(+d.TOTALVALUE) 
         }))
-        .attr('transform', 'translate(' + 50 + ',' + 50 + ')')      
+        // .attr('transform', 'translate(' + 50 + ',' + 200 + ')')      
 }
