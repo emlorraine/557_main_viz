@@ -17,8 +17,8 @@ OccupancyChart.prototype.init = function(){
     
 
     const svg = d3.select("#occupancy").append("svg")
-        .attr("width", 1000)
-        .attr("height", 500)
+        .attr("width", 1200)
+        .attr("height", 600)
         .attr("class", "occupancy");
 
     var x = d3.scaleLinear()
@@ -36,13 +36,19 @@ OccupancyChart.prototype.init = function(){
         .call(d3.axisLeft(y));
 
     // Add the line
-    // svg.append("path")
-    //   .datum(self.data)
-    //   .attr("fill", "none")
-    //   .attr("stroke", "steelblue")
-    //   .attr("stroke-width", 1.5)
-    //   .attr("d", d3.line()
-    //     .x(function(d) { return x(d.date) })
-    //     .y(function(d) { return y(d.value) })
-    //     )     
+    svg.append("path")
+      .datum(self.data)
+      .attr("fill", "none")
+      .attr("stroke", "steelblue")
+      .attr("stroke-width", 3)
+      .attr("d", d3.line()
+        .x(function(d) { 
+            console.log("hello")
+            return x(+d.YEAR) 
+        })
+        .y(function(d) { 
+            console.log(+d.TOTALNUMBER)
+            return y(+d.TOTALNUMBER) 
+        }))
+        .attr('transform', 'translate(' + 50 + ',' + 50 + ')')     
 }
