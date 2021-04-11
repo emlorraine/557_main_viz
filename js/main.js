@@ -7,9 +7,9 @@
       d3.csv("data/demolition.csv"),
     ]).then(function (files) {
         var centralChart = new CentralChart(files[0], files[1], files[2]); 
-        // var costChart = new CostChart(files[0], files[1], files[2]); 
-
-
+        var occupancy = new OccupancyChart(files[0]);
+        var permits = new PermitChart(files[1]);
+        var demolition = new DemolitionChart(files[2]);
     });
   }
 

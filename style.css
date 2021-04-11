@@ -6,5 +6,29 @@ html{
 h1{
     text-align: center;
     color: #14213d;
+}
+
+p{
+    font-size: small;
+    margin-left: 50px;
+    color: #14213d;
 
 }
+
+.labels{
+    font-size: small;
+
+}
+
+/* .occupancy{
+    float: left;
+}
+
+.demolition{
+    float: left; 
+
+}
+
+.permit{
+    float: left; 
+} */

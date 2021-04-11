@@ -1,5 +1,5 @@
 
-function CentralChart(occupancyData, permitData, demolitionData){
+function CostChart(occupancyData, permitData, demolitionData){
     let self = this;
     self.occupancyData = occupancyData;
     self.permitData = permitData;
@@ -10,33 +10,33 @@ function CentralChart(occupancyData, permitData, demolitionData){
     self.init();
 };
 
-CentralChart.prototype.init = function(){
+CostChart.prototype.init = function(){
     let self = this;
     self.margin = {top: 20, right: 175, bottom: 30, left: 175};
-    self.svgBounds = d3.select("#occupancy").node().getBoundingClientRect();
+    self.svgBounds = d3.select("#cost").node().getBoundingClientRect();
     self.svgWidth = self.svgBounds.width - self.margin.left - self.margin.right;
     self.svgHeight = self.svgWidth/2;
     
 
-    const svg = d3.select("#occupancy").append("svg")
+    const svg = d3.select("#cost").append("svg")
         .attr("width", 1200)
         .attr("height", 600)
-        .attr("class", "occupancy");
+        .attr("class", "cost");
 
     var x = d3.scaleLinear()
         .domain(d3.extent(self.permitData, function(d) { return +d.YEAR; }))
-        .range([ 0, 800 ]);
+        .range([0, 800 ]);
     svg.append("g")
-        .attr("transform", "translate(0," + 500 + ")")
+        .attr("transform", "translate(75," + 500 + ")")
         .call(d3.axisBottom(x));
 
     var y = d3.scaleLinear()
         .domain([0, d3.max(self.permitData, function(d) { return +d.TOTALVALUE; })])
         .range([ 450, 0 ]);
     svg.append("g")
+        .attr('transform', 'translate(' + 75 + ',' + 50 + ')') 
         .call(d3.axisLeft(y));
 
-    // Add the line
     svg.append("path")
       .datum(self.occupancyData)
       .attr("fill", "none")
@@ -49,7 +49,7 @@ CentralChart.prototype.init = function(){
         .y(function(d) { 
             return y(+d.TOTALVALUE) 
         }))
-        .attr('transform', 'translate(' + 50 + ',' + 50 + ')') 
+        .attr('transform', 'translate(' + 75 + ',' + 50 + ')') 
 
     svg.append("path")
       .datum(self.permitData)
@@ -63,7 +63,7 @@ CentralChart.prototype.init = function(){
         .y(function(d) { 
             return y(+d.TOTALVALUE) 
         }))
-        .attr('transform', 'translate(' + 50 + ',' + 50 + ')') 
+        .attr('transform', 'translate(' + 75 + ',' + 50 + ')') 
 
     svg.append("path")
       .datum(self.demolitionData)
@@ -78,5 +78,5 @@ CentralChart.prototype.init = function(){
             console.log(d);
             return y(+d.TOTALVALUE) 
         }))
-        // .attr('transform', 'translate(' + 50 + ',' + 200 + ')')      
+        .attr('transform', 'translate(' + 75 + ',' + 50 + ')') 
 }

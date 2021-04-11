@@ -16,7 +16,7 @@ CentralChart.prototype.init = function(){
     
 
     const svg = d3.select("#central").append("svg")
-        .attr("width", 1200)
+        .attr("width", 900)
         .attr("height", 600)
         .attr("class", "central");
 
@@ -24,17 +24,19 @@ CentralChart.prototype.init = function(){
         .domain(d3.extent(self.permitData, function(d) { return +d.YEAR; }))
         .range([ 0, 800 ]);
     svg.append("g")
-        .attr("transform", "translate(50," + 450 + ")")
-        .call(d3.axisBottom(x));
+        .attr("transform", "translate(50," + 500 + ")")
+        .call(d3.axisBottom(x)
+            .ticks(5)
+            .tickFormat(d3.format(".0f"))
+        );
 
     var y = d3.scaleLinear()
         .domain([0, d3.max(self.permitData, function(d) { return +d.TOTALNUMBER; })])
         .range([ 450, 0 ]);
     svg.append("g")
-        .attr("transform", "translate(50," + 0 + ")")
+        .attr("transform", "translate(50," + 50 + ")")
         .call(d3.axisLeft(y));
 
-    // Add the line
     svg.append("path")
       .datum(self.occupancyData)
       .attr("fill", "none")
@@ -47,7 +49,8 @@ CentralChart.prototype.init = function(){
         .y(function(d) { 
             return y(+d.TOTALNUMBER) 
         }))
-        .attr("transform", "translate(50," + 0 + ")")
+        .attr("transform", "translate(50," + 50 + ")")
+        
 
     svg.append("path")
       .datum(self.permitData)
@@ -61,7 +64,7 @@ CentralChart.prototype.init = function(){
         .y(function(d) { 
             return y(+d.TOTALNUMBER) 
         }))
-        .attr("transform", "translate(50," + 0 + ")")
+        .attr("transform", "translate(50," + 50 + ")")
 
     svg.append("path")
       .datum(self.demolitionData)
@@ -75,5 +78,22 @@ CentralChart.prototype.init = function(){
         .y(function(d) { 
             return y(+d.TOTALNUMBER) 
         }))
-        .attr("transform", "translate(50," + 0 + ")")
+        .attr("transform", "translate(50," + 50 + ")")
+
+    svg.append("text")
+        .attr("y", 550)
+        .attr("x", 425)
+        .attr("class", "labels")
+        .text("Year");
+    
+    svg.append("text")
+        .attr("class", "labels")
+        .attr("text-anchor", "end")
+        .attr("y", 0)
+        .attr("x", -200)
+        .attr("dy", ".75em")
+        .attr("transform", "rotate(-90)")
+        .text("Number of permits");
+
+    
 }
