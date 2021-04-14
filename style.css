@@ -3,6 +3,12 @@ html{
     font-family: Arial, Helvetica, sans-serif;
 }
 
+#dashboard{
+    margin: 0 auto;
+    width: 90%;
+    height: 90%;
+}
+
 h1{
     text-align: center;
     color: #14213d;
