@@ -10,13 +10,66 @@
 
 <body>
 
-<h1>World Population from 1960 to 2019</h1>
-<div id="dashboard">
-    <div id="world-pop-chart" class="view">
-        <svg></svg>
+<!-- Intro pop-up -->
+<div id="intro-pop-up">
+    <div class="text-container">
+        <h1>Instructions:</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vestibulum molestie felis. Donec justo massa, posuere eget ultrices ut, 
+            rutrum non nibh. Etiam ac magna nec neque aliquet dapibus. Sed rutrum, neque ac lobortis vulputate, nulla arcu lobortis odio, sit amet 
+            lobortis sem orci id metus. Aenean vitae auctor tortor, eleifend aliquet nibh. Orci varius natoque penatibus et magnis dis parturient</p>
+        <p>montes, nascetur ridiculus mus. Quisque vulputate, orci at feugiat hendrerit, nisl velit ultrices ligula, nec rutrum justo ante in erat. 
+            Cras scelerisque nulla nec sem rhoncus, non gravida tellus gravida. In maximus rutrum nisi at condimentum. Proin porttitor efficitur urna
+            et semper. Aenean nec purus ante. Nunc posuere, felis vel finibus vulputate, lacus felis semper urna, non pharetra sapien sapien vel erat</p>
+    </div>
+    <div class="btn-container">
+        <button class="go-to-experiment">Start</button>
     </div>
 </div>
 
+<!-- Experiment -->
+<div id="experiment-page">
+    <div class="navbar">
+        <h1>World Population from 1960 to 2019</h1>
+    </div>
+    <div class="dashboard">
+        <div class="visualization">
+            <div class="world-pop-chart" class="view">
+                <svg></svg>
+            </div>
+        </div>
+        <!-- We can add more visualizations here as we want -->
+        <!-- <div class="visualization">
+        </div> -->
+        <div class="navbar"> 
+            <a href="#" id="end-experiment">END ANALYSIS</a>
+        </div>
+    </div>
+</div>
+
+<!-- Questions -->
+<div id="questions">
+    <h1>Questions:</h1>
+    <div class="questions-container">
+        <p>1. </p>
+    </div>
+   
+    <a href="#" id="end-task">END ANALYSIS</a>
+  
+</div>
+
+<!-- End pop-up -->
+<div id="userid-pop-up">
+    <div class="text-container">
+        <h1>Thank you:</h1>
+        <p>Here is you id:</p>
+    </div>
+    <div class="id-container">
+        <p class="generate-id"></p>
+    </div>
+</div>
+
+
+<script src="js/interactions.js"></script>
 <script type="application/javascript" src="js/central.js"></script>
 <script type="application/javascript" src="js/main.js"></script>
 

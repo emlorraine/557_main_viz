@@ -7,15 +7,10 @@ function CentralChart(worldData){
 
 CentralChart.prototype.init = function(){
     let self = this;
-    let divVisualization = d3.select("#world-pop-chart");
+    let divVisualization = d3.select(".world-pop-chart");
     self.svgBounds = divVisualization.node().getBoundingClientRect();
     self.svgWidth = self.svgBounds.width;
     self.svgHeight = self.svgWidth/2;
-
-    // self.margin = {top: 20, right: 175, bottom: 30, left: 175};
-    // self.svgBounds = d3.select("#word-pop-chart").node().getBoundingClientRect();
-    // self.svgWidth = self.svgBounds.width - self.margin.left - self.margin.right;
-    // self.svgHeight = self.svgWidth/2;
 
     var svg = divVisualization.select("svg")
         .attr("id", "visualization")
@@ -32,9 +27,9 @@ CentralChart.prototype.init = function(){
 
     var yScale = d3.scaleLinear()
         .domain([d3.min(self.worldData, function(d) { 
-            return +d.World; 
+            return +d.Kazakhstan; 
         }), d3.max(self.worldData, function(d) { 
-            return +d.World; 
+            return +d.Kazakhstan; 
         })])
         .range([ self.svgHeight - padding, padding ]);
     
@@ -44,9 +39,10 @@ CentralChart.prototype.init = function(){
             return xScale(+d.Year);
         })
         .y(function (d) {
-            return yScale(+d.World);
+            return yScale(+d.Kazakhstan);
         });
 
+    console.log(self.worldData)
     svg.append("path")
         .data(self.worldData)
         .attr("fill", "none")
@@ -57,11 +53,11 @@ CentralChart.prototype.init = function(){
     //Axis
 	let xAxis = d3.axisBottom()
         .scale(xScale)
-        .ticks(21)
+        .ticks(10)
 
     let yAxis = d3.axisLeft()
         .scale(yScale)
-        .ticks(21)
+        .ticks(10)
         
     svg.append("g")
         .attr("class", "axis x-axis")
@@ -72,6 +68,21 @@ CentralChart.prototype.init = function(){
         .attr("class", "axis y-axis")
         .attr("transform", "translate(" + padding + ",0)")
         .call(yAxis);
+
+    // svg.append("text")
+	// 	.text("World Population")
+	// 	.attr("y", self.svgHeight)
+	// 	.attr("x", self.svgWidth/2)
+	// 	.attr("class", "chartText")
+	// 	.style("text-anchor", "middle");
+
+	// svg.append("text")
+	// 	.text("Year")
+	// 	.attr("transform", "rotate(-90)")
+	// 	.style("text-anchor", "middle")
+	// 	.attr("class", "chartText")
+	// 	.attr("x", -self.svgWidth/3)
+	// 	.attr("y", 30);
 
     // svg.append("g")
     //     .call(d3.axisBottom(xScale)
