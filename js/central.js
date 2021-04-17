@@ -34,6 +34,11 @@ CentralChart.prototype.init = function(){
         .range([ self.svgHeight - padding, padding ]);
     
     //Adding line
+
+    // d3.csv("/data/world.csv", function(data) {
+    //     console.log(data)
+    //     console.log("--------------------")
+    // })
     var aLineGenerator = d3.line()
         .x(function (d) {
             return xScale(+d.Year);
@@ -42,13 +47,33 @@ CentralChart.prototype.init = function(){
             return yScale(+d.Kazakhstan);
         });
 
-    console.log(self.worldData)
     svg.append("path")
-        .data(self.worldData)
+        // .data(self.worldData)
         .attr("fill", "none")
         .attr("stroke", "steelblue")
         .attr("stroke-width", 3)
-        .attr("d", aLineGenerator(self.worldData));
+        // .attr("d", aLineGenerator(self.worldData));
+        .attr("d", (function(d){
+            const data = d3.csv("/data/world.csv", function(data) {
+                //Object.entries(data)[Country][Population]
+                console.log(Object.entries(data)[1])
+                // for(var i = 0; i < Object.entries(data).length; i++){
+                //         console.log("---------------------------") 
+                //     }
+                // }
+            })
+            return d; 
+        })); 
+        // .attr("d", aLineGenerator(function(d){
+        //     d3.csv("/data/world.csv", function(data) {
+        //         console.log(data); 
+        //     })
+        //     console.log(d)
+        //     return d; 
+        // }));
+    
+   
+
 
     //Axis
 	let xAxis = d3.axisBottom()
