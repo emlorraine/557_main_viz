@@ -84,4 +84,6 @@ a{
 
 div#questions {
     display: none;
+    margin-left: 200px;
+    text-align: center;
 }
