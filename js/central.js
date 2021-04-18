@@ -1,4 +1,3 @@
-
 function CentralChart(worldData){
     let self = this;
     self.worldData = worldData;
@@ -21,34 +20,28 @@ CentralChart.prototype.init = function(){
 
     //Scale
     var xScale = d3.scaleLinear()
-        .domain(d3.extent(self.worldData, function(d) { return +d.Year; }))
+        .domain([1960, 2020])
         .range([ padding, self.svgWidth ]);
-
-
     var yScale = d3.scaleLinear()
-        .domain([d3.min(self.worldData, function(d) { 
-            return +d.Kazakhstan; 
-        }), d3.max(self.worldData, function(d) { 
-            return +d.Kazakhstan; 
-        })])
+        .domain([3893, 5769226171])
         .range([ self.svgHeight - padding, padding ]);
-    
-    //Adding line
-    var aLineGenerator = d3.line()
-        .x(function (d) {
-            return xScale(+d.Year);
-        })
-        .y(function (d) {
-            return yScale(+d.Kazakhstan);
-        });
 
-    console.log(self.worldData)
-    svg.append("path")
-        .data(self.worldData)
-        .attr("fill", "none")
-        .attr("stroke", "steelblue")
-        .attr("stroke-width", 3)
-        .attr("d", aLineGenerator(self.worldData));
+    d3.csv("data/world.csv", function(data){
+            for(var i = 0; i < Object.entries(data).length; i++){
+                // console.log("YEAR")
+                // console.log(Object.entries(data)[0][1])
+                // console.log("COUNTRY")
+                // console.log(Object.entries(data)[i][0])
+                // console.log("POPULATION")
+                // console.log(Object.entries(data)[i][1])
+                // console.log("-----------------------")
+                svg.append("circle")
+                    .attr("cx", xScale(Object.entries(data)[0][1]))
+                    .attr("cy", yScale(Object.entries(data)[i][1]))
+                    .attr("r", 2)
+                    .attr("fill", "black")
+            }
+    })
 
     //Axis
 	let xAxis = d3.axisBottom()
@@ -68,75 +61,4 @@ CentralChart.prototype.init = function(){
         .attr("class", "axis y-axis")
         .attr("transform", "translate(" + padding + ",0)")
         .call(yAxis);
-
-    // svg.append("text")
-	// 	.text("World Population")
-	// 	.attr("y", self.svgHeight)
-	// 	.attr("x", self.svgWidth/2)
-	// 	.attr("class", "chartText")
-	// 	.style("text-anchor", "middle");
-
-	// svg.append("text")
-	// 	.text("Year")
-	// 	.attr("transform", "rotate(-90)")
-	// 	.style("text-anchor", "middle")
-	// 	.attr("class", "chartText")
-	// 	.attr("x", -self.svgWidth/3)
-	// 	.attr("y", 30);
-
-    // svg.append("g")
-    //     .call(d3.axisBottom(xScale)
-    //         .ticks(21)
-    //         .tickFormat(d3.format(".0f"))
-    //     )
-    //     .attr("transform", "translate(0," + self.svgHeight + ")");
-    
-
-    // svg.append("g")
-    //     .call(d3.axisLeft(yScale));
-
-    // svg.append("path")
-    //   .datum(self.permitData)
-    //   .attr("fill", "none")
-    //   .attr("stroke", "red")
-    //   .attr("stroke-width", 3)
-    //   .attr("d", d3.line()
-    //     .x(function(d) { 
-    //         return x(+d.YEAR) 
-    //     })
-    //     .y(function(d) { 
-    //         return y(+d) 
-    //     }))
-    //     .attr("transform", "translate(500," + 50 + ")")
-
-    // svg.append("path")
-    //   .datum(self.demolitionData)
-    //   .attr("fill", "none")
-    //   .attr("stroke", "green")
-    //   .attr("stroke-width", 3)
-    //   .attr("d", d3.line()
-    //     .x(function(d) { 
-    //         return x(+d.YEAR) 
-    //     })
-    //     .y(function(d) { 
-    //         return y(+d.TOTALNUMBER) 
-    //     }))
-    //     .attr("transform", "translate(500," + 50 + ")")
-
-    // svg.append("text")
-    //     .attr("y", 550)
-    //     .attr("x", 850)
-    //     .attr("class", "labels")
-    //     .text("Year");
-    
-    // svg.append("text")
-    //     .attr("class", "labels")
-    //     .attr("text-anchor", "end")
-    //     .attr("y", 300)
-    //     .attr("x", -200)
-    //     .attr("dy", ".75em")
-    //     .attr("transform", "rotate(-90)")
-    //     .text("Number of people");
-
-    
-}
+    }
