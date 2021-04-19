@@ -1,6 +1,6 @@
 function CentralChart(allData){
     let self = this;
-    
+    console.log(allData);
     self.worldData = allData[0];
     self.world20Data = allData[1];
     self.init();
