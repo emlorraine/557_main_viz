@@ -41,33 +41,67 @@ CentralChart.prototype.init = function(){
     // "POPULATIONS" = arrayData[1-n]
     // "COUNTRY NAMES" = Object.entries(data)
 
+    let tooltip = d3.select(".visualization")
+      .append("div")
+      .style("opacity", 0)
+      .attr("class", "tooltip")
+      .style("background-color", "#fff")
+      .style("border", "solid")
+      .style("border-width", "3px")
+      .style("padding", "4px")
+      .style("position", "absolute")
+      .style("border-radius", "6px")
+
+    let node = svg.selectAll("circle").data(self.worldData);  
 
     for(var i = 1; i < self.worldData.length; i++){
-        svg.append("circle")
+        nodes = node
+            .enter()
+            .append("circle")
             .attr("cx", xScale(self.worldData[i]["Year"]))
             .attr("cy", yScale(self.worldData[i]["India"]))
-            .attr("r", 2)
-            .attr("fill", "green")
+            .attr("r", 3)
+            .attr("fill", "green") 
 
-        svg.append("circle")
+        nodes = node
+            .enter()
+            .append("circle")
             .attr("cx", xScale(self.worldData[i]["Year"]))
             .attr("cy", yScale(self.worldData[i]["Brazil"]))
-            .attr("r", 2)
+            .attr("r", 3)
             .attr("fill", "yellow")
-        
 
-        svg.append("circle")
+        nodes = node
+            .enter()
+            .append("circle")
             .attr("cx", xScale(self.worldData[i]["Year"]))
             .attr("cy", yScale(self.worldData[i]["China"]))
-            .attr("r", 2)
-            .attr("fill", "red")
+            .attr("r", 3)
+            .attr("fill", "red") 
 
-        svg.append("circle")
+        nodes = node
+            .enter()
+            .append("circle")
             .attr("cx", xScale(self.worldData[i]["Year"]))
             .attr("cy", yScale(self.worldData[i]["South Africa"]))
-            .attr("r", 2)
+            .attr("r", 3)
             .attr("fill", "#012291")
     }
+
+    // Tooltips
+    // svg.selectAll("circle").on("mousemove", (event, d) => {    
+    //     console.log(d);        
+    //     tooltip
+    //         .style("opacity", 1)
+    //     tooltip
+    //         .html("<h4>Country: South Africa</h4>  <h4>Population: "+ d["South Africa"] + "</h4>")
+    //         .style("left", (event.pageX+30) + "px")
+    //         .style("top", (event.pageY+30) + "px")
+    //     })
+    //     .on("mouseout", (event, d) => {
+    //         tooltip
+    //             .style("opacity", 0)
+    //     }) 
     
 
     //Axis
