@@ -32,7 +32,8 @@ CentralChart.prototype.init = function(){
     d3.csv("data/world20.csv", function(data){
 
         var arrayData = Object.values(data);
-        // console.log(arrayData);
+
+        // console.log(arrayData[0]);
 
         //"YEAR" = arrayData[0]
         //"POPULATIONS" = arrayData[1-n]
@@ -43,7 +44,6 @@ CentralChart.prototype.init = function(){
         // }
 
         for(var i = 1; i < arrayData.length; i++){
-            console.log(arrayData[i])
             svg.append("circle")
                 .attr("cx", xScale(arrayData[i]))
                 .attr("cy", yScale(arrayData[0]))
