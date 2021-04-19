@@ -3,7 +3,7 @@
 
   function init() {
     
-    let files = ["../data/world.csv", "../data/world20.csv"];
+    let files = ["./data/world.csv", "./data/world20.csv"];
     let promises = [];
 
     files.forEach(function (path) {
