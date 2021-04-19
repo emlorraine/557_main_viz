@@ -1,6 +1,8 @@
-function CentralChart(worldData){
+function CentralChart(allData){
     let self = this;
-    self.worldData = worldData;
+    
+    self.worldData = allData[0];
+    self.world20Data = allData[1];
     self.init();
 };
 
@@ -20,48 +22,53 @@ CentralChart.prototype.init = function(){
 
     //Scale
     var xScale = d3.scaleLinear()
-        // .domain([1960, 2020])
-        .domain([1999, 2019])
+        .domain([1959, 2020])
+        // .domain([1999, 2019])
         .range([ padding, self.svgWidth - padding ]);
 
     var yScale = d3.scaleLinear()
-        .domain([10000000, d3.max(self.worldData, function(d) { 
-            return +d.World; 
+        .domain([0, d3.max(self.worldData, function(d) { 
+            return +d.China; 
         })])
         .range([ self.svgHeight - padding, padding ]);
 
     //world20.csv = last 20 years 
     //world.csv = full 
 
-    d3.csv("data/world.csv", function(data){
+    // console.log(arrayData[0]);
 
-        var arrayData = Object.values(data);
+    // "YEAR" = arrayData[0]
+    // "POPULATIONS" = arrayData[1-n]
+    // "COUNTRY NAMES" = Object.entries(data)
 
-        // console.log(arrayData[0]);
 
-        // "YEAR" = arrayData[0]
-        // "POPULATIONS" = arrayData[1-n]
-        // "COUNTRY NAMES" = Object.entries(data)
+    for(var i = 1; i < self.worldData.length; i++){
+        svg.append("circle")
+            .attr("cx", xScale(self.worldData[i]["Year"]))
+            .attr("cy", yScale(self.worldData[i]["India"]))
+            .attr("r", 2)
+            .attr("fill", "green")
 
-        // for(var i = 1; i < arrayData.length; i++){
-        //     console.log(arrayData[i])
-        // }
-        // console.log(data);
-        for(var i = 1; i < arrayData.length; i++){
-            // console.log(arrayData[i]);
-            // console.log(arrayData[0]);
-            svg.append("circle")
-                .attr("cx", xScale(arrayData[0]))
-                .attr("cy", yScale(arrayData[i]))
-                .attr("r", 2)
-                .attr("fill", function(data){
-                    console.log(data);
-                    return "black";
-                }) //Eventually set color scale 
+        svg.append("circle")
+            .attr("cx", xScale(self.worldData[i]["Year"]))
+            .attr("cy", yScale(self.worldData[i]["Brazil"]))
+            .attr("r", 2)
+            .attr("fill", "yellow")
+        
+
+        svg.append("circle")
+            .attr("cx", xScale(self.worldData[i]["Year"]))
+            .attr("cy", yScale(self.worldData[i]["China"]))
+            .attr("r", 2)
+            .attr("fill", "red")
+
+        svg.append("circle")
+            .attr("cx", xScale(self.worldData[i]["Year"]))
+            .attr("cy", yScale(self.worldData[i]["South Africa"]))
+            .attr("r", 2)
+            .attr("fill", "#012291")
+    }
     
-        }
-        console.log("-----------------------")
-    })
 
     //Axis
 	let xAxis = d3.axisBottom()
