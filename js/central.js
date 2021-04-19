@@ -23,32 +23,42 @@ CentralChart.prototype.init = function(){
         .domain([1960, 2020])
         // .domain([1999, 2019])
         .range([ padding, self.svgWidth - padding ]);
+
     var yScale = d3.scaleLinear()
-        .domain([3893, 5769226171])
+        .domain([10000000, d3.max(self.worldData, function(d) { 
+            return +d.World; 
+        })])
         .range([ self.svgHeight - padding, padding ]);
 
     //world20.csv = last 20 years 
     //world.csv = full 
-    d3.csv("data/world20.csv", function(data){
+
+    d3.csv("data/world.csv", function(data){
 
         var arrayData = Object.values(data);
 
         // console.log(arrayData[0]);
 
-        //"YEAR" = arrayData[0]
-        //"POPULATIONS" = arrayData[1-n]
-        //"COUNTRY NAMES" = Object.entries(data)
+        // "YEAR" = arrayData[0]
+        // "POPULATIONS" = arrayData[1-n]
+        // "COUNTRY NAMES" = Object.entries(data)
 
         // for(var i = 1; i < arrayData.length; i++){
         //     console.log(arrayData[i])
         // }
-
+        // console.log(data);
         for(var i = 1; i < arrayData.length; i++){
+            // console.log(arrayData[i]);
+            // console.log(arrayData[0]);
             svg.append("circle")
-                .attr("cx", xScale(arrayData[i]))
-                .attr("cy", yScale(arrayData[0]))
+                .attr("cx", xScale(arrayData[0]))
+                .attr("cy", yScale(arrayData[i]))
                 .attr("r", 2)
-                .attr("fill", "black") //Eventually set color scale 
+                .attr("fill", function(data){
+                    console.log(data);
+                    return "black";
+                }) //Eventually set color scale 
+    
         }
         console.log("-----------------------")
     })
