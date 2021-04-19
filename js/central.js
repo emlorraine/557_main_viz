@@ -21,26 +21,36 @@ CentralChart.prototype.init = function(){
     //Scale
     var xScale = d3.scaleLinear()
         .domain([1960, 2020])
-        .range([ padding, self.svgWidth ]);
+        // .domain([1999, 2019])
+        .range([ padding, self.svgWidth - padding ]);
     var yScale = d3.scaleLinear()
         .domain([3893, 5769226171])
         .range([ self.svgHeight - padding, padding ]);
 
-    d3.csv("data/world.csv", function(data){
-            for(var i = 0; i < Object.entries(data).length; i++){
-                // console.log("YEAR")
-                // console.log(Object.entries(data)[0][1])
-                // console.log("COUNTRY")
-                // console.log(Object.entries(data)[i][0])
-                // console.log("POPULATION")
-                // console.log(Object.entries(data)[i][1])
-                // console.log("-----------------------")
-                svg.append("circle")
-                    .attr("cx", xScale(Object.entries(data)[0][1]))
-                    .attr("cy", yScale(Object.entries(data)[i][1]))
-                    .attr("r", 2)
-                    .attr("fill", "black")
-            }
+    //world20.csv = last 20 years 
+    //world.csv = full 
+    d3.csv("data/world20.csv", function(data){
+
+        var arrayData = Object.values(data);
+        // console.log(arrayData);
+
+        //"YEAR" = arrayData[0]
+        //"POPULATIONS" = arrayData[1-n]
+        //"COUNTRY NAMES" = Object.entries(data)
+
+        // for(var i = 1; i < arrayData.length; i++){
+        //     console.log(arrayData[i])
+        // }
+
+        for(var i = 1; i < arrayData.length; i++){
+            console.log(arrayData[i])
+            svg.append("circle")
+                .attr("cx", xScale(arrayData[i]))
+                .attr("cy", yScale(arrayData[0]))
+                .attr("r", 2)
+                .attr("fill", "black") //Eventually set color scale 
+        }
+        console.log("-----------------------")
     })
 
     //Axis
