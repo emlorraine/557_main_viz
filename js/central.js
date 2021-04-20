@@ -22,7 +22,7 @@ CentralChart.prototype.init = function(){
 
     //Scale
     var xScale = d3.scaleLinear()
-        .domain([1999, 2019])
+        .domain([1960, 2019])
         .range([ padding, self.svgWidth - padding ]);
 
     var yScale = d3.scaleLinear()
