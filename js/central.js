@@ -27,7 +27,7 @@ CentralChart.prototype.init = function(){
 
     var yScale = d3.scaleLinear()
         .domain([0, d3.max(self.worldData, function(d) { 
-            return +d.China; 
+            return +d.Pakistan; 
         })])
         .range([ self.svgHeight - padding, padding ]);
 
@@ -54,37 +54,176 @@ CentralChart.prototype.init = function(){
     let node = svg.selectAll("circle").data(self.worldData);  
 
     for(var i = 1; i < self.worldData.length; i++){
+
         nodes = node
             .enter()
             .append("circle")
             .attr("cx", xScale(self.worldData[i]["Year"]))
-            .attr("cy", yScale(self.worldData[i]["India"]))
-            .attr("r", 3)
-            .attr("fill", "green") 
+            .attr("cy", yScale(self.worldData[i]["Pakistan"]))
+            .attr("r", 2.5)
+            .attr("fill", "#15e10e") 
+
+        nodes = node
+            .enter()
+            .append("circle")
+            .attr("cx", xScale(self.worldData[i]["Year"]))
+            .attr("cy", yScale(self.worldData[i]["Peru"]))
+            .attr("r", 2.5)
+            .attr("fill", "#afb668") 
+
+        nodes = node
+            .enter()
+            .append("circle")
+            .attr("cx", xScale(self.worldData[i]["Year"]))
+            .attr("cy", yScale(self.worldData[i]["Bangladesh"]))
+            .attr("r", 2.5)
+            .attr("fill", "#fec699") 
 
         nodes = node
             .enter()
             .append("circle")
             .attr("cx", xScale(self.worldData[i]["Year"]))
             .attr("cy", yScale(self.worldData[i]["Brazil"]))
-            .attr("r", 3)
-            .attr("fill", "yellow")
+            .attr("r", 2.5)
+            .attr("fill", "#6f919a")
 
         nodes = node
             .enter()
             .append("circle")
             .attr("cx", xScale(self.worldData[i]["Year"]))
-            .attr("cy", yScale(self.worldData[i]["China"]))
-            .attr("r", 3)
-            .attr("fill", "red") 
+            .attr("cy", yScale(self.worldData[i]["Philippines"]))
+            .attr("r", 2.5)
+            .attr("fill", "#a5cd0e")
+
+
+        nodes = node
+            .enter()
+            .append("circle")
+            .attr("cx", xScale(self.worldData[i]["Year"]))
+            .attr("cy", yScale(self.worldData[i]["United Kingdom"]))
+            .attr("r", 2.5)
+            .attr("fill", "#9193d2")
+
+        nodes = node
+            .enter()
+            .append("circle")
+            .attr("cx", xScale(self.worldData[i]["Year"]))
+            .attr("cy", yScale(self.worldData[i]["Iran, Islamic Rep."]))
+            .attr("r", 2.5)
+            .attr("fill", "#a84fd9")
+
+        nodes = node
+            .enter()
+            .append("circle")
+            .attr("cx", xScale(self.worldData[i]["Year"]))
+            .attr("cy", yScale(self.worldData[i]["Mexico"]))
+            .attr("r", 2.5)
+            .attr("fill", "#27ccef")
+
+        nodes = node
+            .enter()
+            .append("circle")
+            .attr("cx", xScale(self.worldData[i]["Year"]))
+            .attr("cy", yScale(self.worldData[i]["Togo"]))
+            .attr("r", 2.5)
+            .attr("fill", "#3108a3")
+
+        nodes = node
+            .enter()
+            .append("circle")
+            .attr("cx", xScale(self.worldData[i]["Year"]))
+            .attr("cy", yScale(self.worldData[i]["Egypt, Arab Rep."]))
+            .attr("r", 2.5)
+            .attr("fill", "#e24181") 
 
         nodes = node
             .enter()
             .append("circle")
             .attr("cx", xScale(self.worldData[i]["Year"]))
             .attr("cy", yScale(self.worldData[i]["South Africa"]))
-            .attr("r", 3)
-            .attr("fill", "#012291")
+            .attr("r", 2.5)
+            .attr("fill", "#d64023")
+
+        nodes = node
+            .enter()
+            .append("circle")
+            .attr("cx", xScale(self.worldData[i]["Year"]))
+            .attr("cy", yScale(self.worldData[i]["Korea, Dem. People’s Rep."]))
+            .attr("r", 2.5)
+            .attr("fill", "#0ec07b")
+
+        nodes = node
+            .enter()
+            .append("circle")
+            .attr("cx", xScale(self.worldData[i]["Year"]))
+            .attr("cy", yScale(self.worldData[i]["Germany"]))
+            .attr("r", 2.5)
+            .attr("fill", "#ff0461")
+
+        nodes = node
+            .enter()
+            .append("circle")
+            .attr("cx", xScale(self.worldData[i]["Year"]))
+            .attr("cy", yScale(self.worldData[i]["Venezuela, RB"]))
+            .attr("r", 2.5)
+            .attr("fill", "#2a9e04")
+
+        nodes = node
+            .enter()
+            .append("circle")
+            .attr("cx", xScale(self.worldData[i]["Year"]))
+            .attr("cy", yScale(self.worldData[i]["Italy"]))
+            .attr("r", 2.5)
+            .attr("fill", "#8c74d1")
+
+        nodes = node
+            .enter()
+            .append("circle")
+            .attr("cx", xScale(self.worldData[i]["Year"]))
+            .attr("cy", yScale(self.worldData[i]["Ukraine"]))
+            .attr("r", 2.5)
+            .attr("fill", "#215988")
+
+        nodes = node
+            .enter()
+            .append("circle")
+            .attr("cx", xScale(self.worldData[i]["Year"]))
+            .attr("cy", yScale(self.worldData[i]["Argentina"]))
+            .attr("r", 2.5)
+            .attr("fill", "#d1c041")
+
+
+        nodes = node
+            .enter()
+            .append("circle")
+            .attr("cx", xScale(self.worldData[i]["Year"]))
+            .attr("cy", yScale(self.worldData[i]["Nigeria"]))
+            .attr("r", 2.5)
+            .attr("fill", "#48593e")
+
+        nodes = node
+            .enter()
+            .append("circle")
+            .attr("cx", xScale(self.worldData[i]["Year"]))
+            .attr("cy", yScale(self.worldData[i]["Japan"]))
+            .attr("r", 2.5)
+            .attr("fill", "#818b92")
+
+        nodes = node
+            .enter()
+            .append("circle")
+            .attr("cx", xScale(self.worldData[i]["Year"]))
+            .attr("cy", yScale(self.worldData[i]["Australia"]))
+            .attr("r", 2.5)
+            .attr("fill", "#294335")
+
+        nodes = node
+            .enter()
+            .append("circle")
+            .attr("cx", xScale(self.worldData[i]["Year"]))
+            .attr("cy", yScale(self.worldData[i]["Russian Federation"]))
+            .attr("r", 2.5)
+            .attr("fill", "#2ddd59")
     }
 
     // Tooltips
