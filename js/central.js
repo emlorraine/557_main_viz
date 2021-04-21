@@ -1,7 +1,6 @@
 function CentralChart(allData){
     let self = this;
-    console.log(allData);
-    self.worldData = allData[0];
+    self.worldData = allData[1];
     self.world20Data = allData[1];
     self.init();
 };
@@ -18,18 +17,18 @@ CentralChart.prototype.init = function(){
         .attr("width",self.svgWidth)
         .attr("height",self.svgHeight)
 
-    var padding = 80;
+    var padding = 70;
 
     //Scale
     var xScale = d3.scaleLinear()
-        .domain([1960, 2019])
+        .domain([1999, 2019])
         .range([ padding, self.svgWidth - padding ]);
 
     var yScale = d3.scaleLinear()
         .domain([0, d3.max(self.worldData, function(d) { 
             return +d.Pakistan; 
         })])
-        .range([ self.svgHeight - padding, padding ]);
+        .range([ self.svgHeight - 20, 10 ]);
 
     //world20.csv = last 20 years 
     //world.csv = full 
@@ -246,6 +245,7 @@ CentralChart.prototype.init = function(){
 	let xAxis = d3.axisBottom()
         .scale(xScale)
         .ticks(10)
+        .tickFormat(d3.format("d"))
 
     let yAxis = d3.axisLeft()
         .scale(yScale)
@@ -253,7 +253,7 @@ CentralChart.prototype.init = function(){
         
     svg.append("g")
         .attr("class", "axis x-axis")
-        .attr("transform", "translate(0," + (self.svgHeight - padding) + ")")
+        .attr("transform", "translate(0," + (self.svgHeight - 20) + ")")
         .call(xAxis);
 
     svg.append("g")

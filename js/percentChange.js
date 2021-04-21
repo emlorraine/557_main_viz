@@ -36,21 +36,20 @@ PercentChange.prototype.init = function() {
         .paddingInner(0.1);
 
     var yScale = d3.scaleLinear()
-        .range([self.svgHeight, 0 ])
-        .nice()
+        .range([self.svgHeight - padding , 0 ])
+        // .nice()
 
     let countryPercentage = self.calculatePercentage("Japan");
 
     xScale.domain(countryPercentage.map(function(d) { return +d["year"]; }));
 
-    let maxChange = d3.max(countryPercentage, function(d) { return +d["percentChange"]; });
+    let maxChange = Math.max(Math.abs(d3.min(countryPercentage, function(d) { return +d["percentChange"]; })), d3.max(countryPercentage, function(d) { return +d["percentChange"]; }));
     yScale.domain([-maxChange, maxChange]);
 
     var bars = svg.selectAll(".bar")
         .remove()
         .exit()
         .data(countryPercentage)
-    // console.log(countryPercentage);
 
     bars.enter()
         .append("rect")

@@ -26,20 +26,32 @@
 <!-- Experiment -->
 <div id="experiment-page">
     <div class="navbar">
-        <h1>World Population from 1960 to 2019</h1>
+        <h1>World Population from 2000 to 2019</h1>
     </div>
     <div class="dashboard">
         <div class="visualization">
+            <center><h4>Population Over Year</h4></center>
             <div class="world-pop-chart" class="view">
                 <svg></svg>
             </div>
         </div>
         <!-- We can add more visualizations here as we want -->
-        <!-- <div class="visualization">
-        </div> -->
-        <div class="navbar"> 
-            <a href="#" id="end-experiment">END ANALYSIS</a>
+        <div class="visualization">
+            <center><h4>Percent Change Over Year</h4></center>
+            <!-- <div class="user-control">
+                <select onchange="update()" id="" class="form-control">
+                  <option value="Japan">Japan</option>
+                  <option value="Nigeria">Nigeria</option>
+                  <option value="Mexico">Mexico</option>
+                </select>
+            </div> -->
+            <div class="percentChange" class="view">
+                <svg></svg>
+            </div>
         </div>
+    </div>
+    <div class="navbar"> 
+        <a href="#" id="end-experiment">END ANALYSIS</a>
     </div>
 </div>
 
@@ -70,6 +82,7 @@
 
 <script src="js/interactions.js"></script>
 <script type="application/javascript" src="js/central.js"></script>
+<script type="application/javascript" src="js/percentChange.js"></script>
 <script type="application/javascript" src="js/main.js"></script>
 
 </body>
