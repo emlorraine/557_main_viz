@@ -22,3 +22,21 @@ endTaskBtn.addEventListener("click", function(){
     document.getElementById("questions").style.display = "none"; 
     document.querySelector(".generate-id").innerHTML = randomId;
 });
+
+function update(){
+    var selectBox = document.getElementById("country-selected");
+	var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+    console.log(selectedValue);
+
+    let files = ["data/world.csv", "data/world20.csv"];
+    let promises = [];
+
+    files.forEach(function (path) {
+      promises.push(d3.csv(path));
+    });
+
+    Promise.all(promises).then(function (values) {
+      var percentChange = new PercentChange(values); 
+      percentChange.update(selectedValue);
+    })
+}

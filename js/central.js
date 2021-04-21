@@ -260,4 +260,14 @@ CentralChart.prototype.init = function(){
         .attr("class", "axis y-axis")
         .attr("transform", "translate(" + padding + ",0)")
         .call(yAxis);
+
+
+    svg.select("text.axis-title").remove();
+    svg.append("text")
+        .attr("class", "axis-title")
+        .attr("x", -5)
+        .attr("y", -15)
+        .attr("dy", ".1em")
+        .style("text-anchor", "end")
+        .text("Annual Visitors");
     }

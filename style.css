@@ -89,3 +89,7 @@ div#questions {
     margin-left: 0 auto;
     text-align: center;
 }
+
+.user-control{
+    padding: 10px;
+}
