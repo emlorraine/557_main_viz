@@ -13,7 +13,6 @@
     Promise.all(promises).then(function (values) {
       var centralChart = new CentralChart(values); 
       var percentChange = new PercentChange(values); 
-      // percentChange.init("Japan");
     })
 
   }

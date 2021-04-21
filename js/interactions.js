@@ -36,7 +36,9 @@ function update(){
     });
 
     Promise.all(promises).then(function (values) {
-      var percentChange = new PercentChange(values); 
-      percentChange.update(selectedValue);
+        var centralChart = new CentralChart(values); 
+        var percentChange = new PercentChange(values); 
+        percentChange.update(selectedValue);
+        centralChart.update(selectedValue);
     })
 }

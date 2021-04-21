@@ -1,10 +1,10 @@
 html{
-    background-color: #f6f6f6;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 body{
     margin: 0;
+    height: 100%;
 }
 
 div#intro-pop-up{
@@ -57,7 +57,7 @@ div#experiment-page div.dashboard{
     height: auto;
     width: 95%;
     height: 80%;
-    margin: 0 auto;
+    margin: 20px auto;
 }
 
 div#experiment-page div.dashboard div.visualization{
@@ -65,10 +65,14 @@ div#experiment-page div.dashboard div.visualization{
     /* border-radius: 10px; */
     padding: 10px;
     margin: 10px auto;
-    width: 90%;
+    width: 48%;
 }
 
-div#experiment-page div.navbar{
+div#experiment-page div.dashboard div.visualization h4{
+    padding: 20px;
+}
+
+div#experiment-page div.text-bar{
     align-items: center;
     text-align: center;
 }
@@ -92,4 +96,10 @@ div#questions {
 
 .user-control{
     padding: 10px;
+    width: 250px;
+    margin: 0 auto;
+}
+
+.questions-container{
+    overflow: hidden;
 }

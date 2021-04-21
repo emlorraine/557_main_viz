@@ -97,6 +97,17 @@ PercentChange.prototype.update = function(country) {
     let self = this;
     var padding = 35;
 
+    let tooltip = d3.select(".percentChange")
+        .select("div")
+        .style("opacity", 0)
+        .attr("class", "tooltip")
+        .style("background-color", "#fff")
+        .style("border", "solid")
+        .style("border-width", "3px")
+        .style("padding", "4px")
+        .style("position", "absolute")
+        .style("border-radius", "6px")    
+
     let svg = d3.selectAll(".percentCahngesvg");
 
     //Scale
@@ -114,6 +125,10 @@ PercentChange.prototype.update = function(country) {
 
     let maxChange = Math.max(Math.abs(d3.min(countryPercentage, function(d) { return +d["percentChange"]; })), d3.max(countryPercentage, function(d) { return +d["percentChange"]; }));
     yScale.domain([-maxChange, maxChange]);
+
+    var t = d3.transition()
+        .duration(750)
+        .ease(d3.easeLinear);
 
     var bars = svg.selectAll(".bar")
         .remove()

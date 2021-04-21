@@ -6,6 +6,7 @@
     <title>World Population from 1960 to 2019</title>
     <link rel="stylesheet" href="style.css"/>
     <script src="js/d3/d3.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 </head>
 
 <body>
@@ -19,70 +20,69 @@
         <p> The data collected from this survey will remain anonymous. Thank you for taking the time to participate in this study.</p>
     </div>
     <div class="btn-container">
-        <button class="go-to-experiment">Start</button>
+        <button class="btn btn-primary go-to-experiment">Start</button>
     </div>
 </div>
 
 <!-- Experiment -->
 <div id="experiment-page">
-    <div class="navbar">
+    <div class="text-bar">
         <h1>World Population from 2000 to 2019</h1>
+        <div class="user-control">
+            <select onchange="update()" id="country-selected" class="form-control">
+                <option value="Japan">Japan</option>
+                <option value="Pakistan">Pakistan</option>
+                <option value="Peru">Peru</option>
+                <option value="Bangladesh">Bangladesh</option>
+                <option value="Brazil">Brazil</option>
+                <option value="Philippines">Philippines</option>
+                <option value="United Kingdom">United Kingdom</option>
+                <option value="Iran, Islamic Rep.">Iran, Islamic Rep.</option>
+                <option value="Mexico">Mexico</option>
+                <option value="Togo">Togo</option>
+                <option value="Egypt, Arab Rep.">Egypt, Arab Rep.</option>
+                <option value="South Africa">South Africa</option>
+                <option value="Korea, Dem. People’s Rep.">Korea, Dem. People’s Rep.</option>
+                <option value="Germany">Germany</option>
+                <option value="Venezuela, RB">Venezuela, RB</option>
+                <option value="Italy">Italy</option>
+                <option value="Ukraine">Ukraine</option>
+                <option value="Argentina">Argentina</option>
+                <option value="Nigeria">Nigeria</option>
+                <option value="Australia">Australia</option>
+                <option value="Russian Federation">Russian Federation</option>
+            </select>
+        </div>
     </div>
     <div class="dashboard">
         <div class="visualization">
             <center><h4>Population Over Year</h4></center>
             <div class="world-pop-chart" class="view">
-                <svg></svg>
+                <svg class="worldsvg"></svg>
             </div>
         </div>
         <!-- We can add more visualizations here as we want -->
         <div class="visualization">
             <center><h4>Percent Change Over Year</h4></center>
-            <div class="user-control">
-                <select onchange="update()" id="country-selected" class="form-control">
-                    <option value="Japan">Japan</option>
-                    <option value="Pakistan">Pakistan</option>
-                    <option value="Peru">Peru</option>
-                    <option value="Bangladesh">Bangladesh</option>
-                    <option value="Brazil">Brazil</option>
-                    <option value="Philippines">Philippines</option>
-                    <option value="United Kingdom">United Kingdom</option>
-                    <option value="Iran, Islamic Rep.">Iran, Islamic Rep.</option>
-                    <option value="Mexico">Mexico</option>
-                    <option value="Togo">Togo</option>
-                    <option value="Egypt, Arab Rep.">Egypt, Arab Rep.</option>
-                    <option value="South Africa">South Africa</option>
-                    <option value="Korea, Dem. People’s Rep.">Korea, Dem. People’s Rep.</option>
-                    <option value="Germany">Germany</option>
-                    <option value="Venezuela, RB">Venezuela, RB</option>
-                    <option value="Italy">Italy</option>
-                    <option value="Ukraine">Ukraine</option>
-                    <option value="Argentina">Argentina</option>
-                    <option value="Nigeria">Nigeria</option>
-                    <option value="Australia">Australia</option>
-                    <option value="Russian Federation">Russian Federation</option>
-                </select>
-            </div>
             <div class="percentChange" class="view">
                 <svg class="percentCahngesvg"></svg>
             </div>
         </div>
     </div>
-    <div class="navbar"> 
-        <a href="#" id="end-experiment">END ANALYSIS</a>
+    <div class="text-bar"> 
+        <a href="#" class="btn btn-primary" id="end-experiment">END ANALYSIS</a>
     </div>
 </div>
 
 <!-- Questions -->
 <div id="questions">
-    <h1>Questions:</h1>
     <div class="questions-container">
         <!-- <p>1. Did you see a general increase or decrease in the world's population?</p>
         <p>1. From looking at the data presented, by 2050, do you expect the general world population to increase or decrease? Please explain why.</p> -->
         <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSftEbCYYZz5EJdZYWEHQ1d5dpzySXekOWI-jAxClquEvseMnw/viewform?embedded=true" width="640" height="716" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
     </div>
    
-    <a href="#" id="end-task">Get ID</a>
+    <a href="#" class="btn btn-primary" id="end-task">Get ID</a>
   
 </div>
 
