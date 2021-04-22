@@ -30,26 +30,6 @@ CentralChart.prototype.init = function(country){
         })])
         .range([ self.svgHeight - 20, 10 ]);
 
-    //world20.csv = last 20 years 
-    //world.csv = full 
-
-    // console.log(arrayData[0]);
-
-    // "YEAR" = arrayData[0]
-    // "POPULATIONS" = arrayData[1-n]
-    // "COUNTRY NAMES" = Object.entries(data)
-
-    let tooltip = d3.select(".visualization")
-      .append("div")
-      .style("opacity", 0)
-      .attr("class", "tooltip")
-      .style("background-color", "#fff")
-      .style("border", "solid")
-      .style("border-width", "3px")
-      .style("padding", "4px")
-      .style("position", "absolute")
-      .style("border-radius", "6px")
-
     let node = svg.selectAll("circle").data(self.worldData);  
 
     for(var i = 1; i < self.worldData.length; i++){
@@ -58,17 +38,17 @@ CentralChart.prototype.init = function(country){
             .enter()
             .append("circle")
             .attr("cx", xScale(self.worldData[i]["Year"]))
-            .attr("cy", yScale(self.worldData[i]["Pakistan"]))
+            .attr("cy", yScale(self.worldData[i]["Lithuania"]))
             .attr("fill", "#15e10e") 
             .attr("r", function(){
-                if(country === "Pakistan"){
+                if(country === "Lithuania"){
                     return 4;
                 } else {
                     return 2.5;
                 }
             })
             .style("stroke", function(){
-                if(country === "Pakistan"){
+                if(country === "Lithuania"){
                     return "black";
                 }
             })
@@ -77,17 +57,17 @@ CentralChart.prototype.init = function(country){
             .enter()
             .append("circle")
             .attr("cx", xScale(self.worldData[i]["Year"]))
-            .attr("cy", yScale(self.worldData[i]["Peru"]))
+            .attr("cy", yScale(self.worldData[i]["Greece"]))
             .attr("fill", "#afb668") 
             .attr("r", function(){
-                if(country === "Peru"){
+                if(country === "Greece"){
                     return 4;
                 } else {
                     return 2.5;
                 }
             })
             .style("stroke", function(){
-                if(country === "Peru"){
+                if(country === "Greece"){
                     return "black";
                 }
             })
@@ -174,17 +154,17 @@ CentralChart.prototype.init = function(country){
             .enter()
             .append("circle")
             .attr("cx", xScale(self.worldData[i]["Year"]))
-            .attr("cy", yScale(self.worldData[i]["Iran, Islamic Rep."]))
+            .attr("cy", yScale(self.worldData[i]["Portugal"]))
             .attr("fill", "#a84fd9")
             .attr("r", function(){
-                if(country === "Iran, Islamic Rep."){
+                if(country === "Portugal"){
                     return 4;
                 } else {
                     return 2.5;
                 }
             })
             .style("stroke", function(){
-                if(country === "Iran, Islamic Rep."){
+                if(country === "Portugal"){
                     return "black";
                 }
             })
@@ -212,36 +192,17 @@ CentralChart.prototype.init = function(country){
             .enter()
             .append("circle")
             .attr("cx", xScale(self.worldData[i]["Year"]))
-            .attr("cy", yScale(self.worldData[i]["Togo"]))
+            .attr("cy", yScale(self.worldData[i]["Bulgaria"]))
             .attr("fill", "#3108a3")
             .attr("r", function(){
-                if(country === "Togo"){
+                if(country === "Bulgaria"){
                     return 4;
                 } else {
                     return 2.5;
                 }
             })
             .style("stroke", function(){
-                if(country === "Togo"){
-                    return "black";
-                }
-            })
-
-        nodes = node
-            .enter()
-            .append("circle")
-            .attr("cx", xScale(self.worldData[i]["Year"]))
-            .attr("cy", yScale(self.worldData[i]["Egypt, Arab Rep."]))
-            .attr("fill", "#e24181") 
-            .attr("r", function(){
-                if(country === "Egypt, Arab Rep."){
-                    return 4;
-                } else {
-                    return 2.5;
-                }
-            })
-            .style("stroke", function(){
-                if(country === "Egypt, Arab Rep."){
+                if(country === "Bulgaria"){
                     return "black";
                 }
             })
@@ -375,26 +336,6 @@ CentralChart.prototype.init = function(country){
             })
             .style("stroke", function(){
                 if(country === "Argentina"){
-                    return "black";
-                }
-            })
-
-
-        nodes = node
-            .enter()
-            .append("circle")
-            .attr("cx", xScale(self.worldData[i]["Year"]))
-            .attr("cy", yScale(self.worldData[i]["Nigeria"]))
-            .attr("fill", "#48593e")
-            .attr("r", function(){
-                if(country === "Nigeria"){
-                    return 4;
-                } else {
-                    return 2.5;
-                }
-            })
-            .style("stroke", function(){
-                if(country === "Nigeria"){
                     return "black";
                 }
             })
@@ -478,16 +419,6 @@ CentralChart.prototype.init = function(country){
         .attr("class", "axis y-axis")
         .attr("transform", "translate(" + padding + ",0)")
         .call(yAxis);
-
-
-    svg.select("text.axis-title").remove();
-    svg.append("text")
-        .attr("class", "axis-title")
-        .attr("x", -5)
-        .attr("y", -15)
-        .attr("dy", ".1em")
-        .style("text-anchor", "end")
-        .text("Annual Visitors");
 }
 
 
@@ -508,18 +439,6 @@ CentralChart.prototype.update = function(country) {
         })])
         .range([ self.svgHeight - 20, 10 ]);
 
-
-    let tooltip = d3.select(".visualization")
-      .append("div")
-      .style("opacity", 0)
-      .attr("class", "tooltip")
-      .style("background-color", "#fff")
-      .style("border", "solid")
-      .style("border-width", "3px")
-      .style("padding", "4px")
-      .style("position", "absolute")
-      .style("border-radius", "6px")
-
     let node = svg.selectAll("circle").remove().exit().data(self.worldData);  
 
     for(var i = 1; i < self.worldData.length; i++){
@@ -528,17 +447,17 @@ CentralChart.prototype.update = function(country) {
             .enter()
             .append("circle")
             .attr("cx", xScale(self.worldData[i]["Year"]))
-            .attr("cy", yScale(self.worldData[i]["Pakistan"]))
+            .attr("cy", yScale(self.worldData[i]["Lithuania"]))
             .attr("fill", "#15e10e") 
             .attr("r", function(){
-                if(country === "Pakistan"){
+                if(country === "Lithuania"){
                     return 4;
                 } else {
                     return 2.5;
                 }
             })
             .style("stroke", function(){
-                if(country === "Pakistan"){
+                if(country === "Lithuania"){
                     return "black";
                 }
             })
@@ -547,17 +466,17 @@ CentralChart.prototype.update = function(country) {
             .enter()
             .append("circle")
             .attr("cx", xScale(self.worldData[i]["Year"]))
-            .attr("cy", yScale(self.worldData[i]["Peru"]))
+            .attr("cy", yScale(self.worldData[i]["Greece"]))
             .attr("fill", "#afb668") 
             .attr("r", function(){
-                if(country === "Peru"){
+                if(country === "Greece"){
                     return 4;
                 } else {
                     return 2.5;
                 }
             })
             .style("stroke", function(){
-                if(country === "Peru"){
+                if(country === "Greece"){
                     return "black";
                 }
             })
@@ -644,17 +563,17 @@ CentralChart.prototype.update = function(country) {
             .enter()
             .append("circle")
             .attr("cx", xScale(self.worldData[i]["Year"]))
-            .attr("cy", yScale(self.worldData[i]["Iran, Islamic Rep."]))
+            .attr("cy", yScale(self.worldData[i]["Portugal"]))
             .attr("fill", "#a84fd9")
             .attr("r", function(){
-                if(country === "Iran, Islamic Rep."){
+                if(country === "Portugal"){
                     return 4;
                 } else {
                     return 2.5;
                 }
             })
             .style("stroke", function(){
-                if(country === "Iran, Islamic Rep."){
+                if(country === "Portugal"){
                     return "black";
                 }
             })
@@ -682,36 +601,17 @@ CentralChart.prototype.update = function(country) {
             .enter()
             .append("circle")
             .attr("cx", xScale(self.worldData[i]["Year"]))
-            .attr("cy", yScale(self.worldData[i]["Togo"]))
+            .attr("cy", yScale(self.worldData[i]["Bulgaria"]))
             .attr("fill", "#3108a3")
             .attr("r", function(){
-                if(country === "Togo"){
+                if(country === "Bulgaria"){
                     return 4;
                 } else {
                     return 2.5;
                 }
             })
             .style("stroke", function(){
-                if(country === "Togo"){
-                    return "black";
-                }
-            })
-
-        nodes = node
-            .enter()
-            .append("circle")
-            .attr("cx", xScale(self.worldData[i]["Year"]))
-            .attr("cy", yScale(self.worldData[i]["Egypt, Arab Rep."]))
-            .attr("fill", "#e24181") 
-            .attr("r", function(){
-                if(country === "Egypt, Arab Rep."){
-                    return 4;
-                } else {
-                    return 2.5;
-                }
-            })
-            .style("stroke", function(){
-                if(country === "Egypt, Arab Rep."){
+                if(country === "Bulgaria"){
                     return "black";
                 }
             })
@@ -845,26 +745,6 @@ CentralChart.prototype.update = function(country) {
             })
             .style("stroke", function(){
                 if(country === "Argentina"){
-                    return "black";
-                }
-            })
-
-
-        nodes = node
-            .enter()
-            .append("circle")
-            .attr("cx", xScale(self.worldData[i]["Year"]))
-            .attr("cy", yScale(self.worldData[i]["Nigeria"]))
-            .attr("fill", "#48593e")
-            .attr("r", function(){
-                if(country === "Nigeria"){
-                    return 4;
-                } else {
-                    return 2.5;
-                }
-            })
-            .style("stroke", function(){
-                if(country === "Nigeria"){
                     return "black";
                 }
             })

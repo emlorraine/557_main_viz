@@ -15,7 +15,7 @@
 <div id="intro-pop-up">
     <div class="text-container">
         <h1>Instructions:</h1>
-        <p>On the following page, you will be presented with the total recorded populations of countries from 1960 to 2019. Please explore the data and think about the kinds of trends your data presents.</p>
+        <p>On the following page, you will be presented with the total recorded populations of 20 randomly selected countries from 1960 to 2019. Please explore the data and think about the kinds of trends your data presents.</p>
         <p>In this study, we shall evaluate the time spent on the coming visualization and ask a few comprehension questions.</p>
         <p> The data collected from this survey will remain anonymous. Thank you for taking the time to participate in this study.</p>
     </div>
@@ -31,32 +31,33 @@
         <div class="user-control">
             <select onchange="update()" id="country-selected" class="form-control">
                 <option value="Japan">Japan</option>
-                <option value="Pakistan">Pakistan</option>
-                <option value="Peru">Peru</option>
-                <option value="Bangladesh">Bangladesh</option>
-                <option value="Brazil">Brazil</option>
-                <option value="Philippines">Philippines</option>
-                <option value="United Kingdom">United Kingdom</option>
-                <option value="Iran, Islamic Rep.">Iran, Islamic Rep.</option>
-                <option value="Mexico">Mexico</option>
-                <option value="Togo">Togo</option>
-                <option value="Egypt, Arab Rep.">Egypt, Arab Rep.</option>
-                <option value="South Africa">South Africa</option>
                 <option value="Korea, Dem. People’s Rep.">Korea, Dem. People’s Rep.</option>
                 <option value="Germany">Germany</option>
                 <option value="Venezuela, RB">Venezuela, RB</option>
                 <option value="Italy">Italy</option>
                 <option value="Ukraine">Ukraine</option>
-                <option value="Argentina">Argentina</option>
-                <option value="Nigeria">Nigeria</option>
-                <option value="Australia">Australia</option>
+                <option value="Bangladesh">Bangladesh</option>
+                <option value="Brazil">Brazil</option>
+                <option value="Lithuania">Lithuania</option>
+                <option value="Philippines">Philippines</option>
+                <option value="United Kingdom">United Kingdom</option>
+                <option value="Portugal">Portugal</option>
+                <option value="Mexico">Mexico</option>
+                <option value="Greece">Greece</option>
+                <!-- <option value="Egypt, Arab Rep.">Egypt, Arab Rep.</option> -->
                 <option value="Russian Federation">Russian Federation</option>
+                <option value="South Africa">South Africa</option>
+                <option value="Argentina">Argentina</option>
+                <!-- <option value="Nigeria">Nigeria</option> -->
+                <option value="Australia">Australia</option>
+                <option value="Bulgaria">Bulgaria</option>
+                
             </select>
         </div>
     </div>
     <div class="dashboard">
         <div class="visualization">
-            <center><h4>Population Over Year</h4></center>
+            <center><h4>Population from 2000 to 2019</h4></center>
             <div class="world-pop-chart" class="view">
                 <svg class="worldsvg"></svg>
             </div>

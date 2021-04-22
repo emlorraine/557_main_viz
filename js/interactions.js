@@ -26,7 +26,6 @@ endTaskBtn.addEventListener("click", function(){
 function update(){
     var selectBox = document.getElementById("country-selected");
 	var selectedValue = selectBox.options[selectBox.selectedIndex].value;
-    console.log(selectedValue);
 
     let files = ["data/world.csv", "data/world20.csv"];
     let promises = [];
