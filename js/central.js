@@ -39,7 +39,7 @@ CentralChart.prototype.init = function(country){
             .append("circle")
             .attr("cx", xScale(self.worldData[i]["Year"]))
             .attr("cy", yScale(self.worldData[i]["Lithuania"]))
-            .attr("fill", "#15e10e") 
+            .attr("fill", "black") 
             .attr("r", function(){
                 if(country === "Lithuania"){
                     return 4;
@@ -58,7 +58,7 @@ CentralChart.prototype.init = function(country){
             .append("circle")
             .attr("cx", xScale(self.worldData[i]["Year"]))
             .attr("cy", yScale(self.worldData[i]["Greece"]))
-            .attr("fill", "#afb668") 
+            .attr("fill", "black") 
             .attr("r", function(){
                 if(country === "Greece"){
                     return 4;
@@ -77,7 +77,7 @@ CentralChart.prototype.init = function(country){
             .append("circle")
             .attr("cx", xScale(self.worldData[i]["Year"]))
             .attr("cy", yScale(self.worldData[i]["Bangladesh"]))
-            .attr("fill", "#fec699") 
+            .attr("fill", "black") 
             .attr("r", function(){
                 if(country === "Bangladesh"){
                     return 4;
@@ -96,7 +96,7 @@ CentralChart.prototype.init = function(country){
             .append("circle")
             .attr("cx", xScale(self.worldData[i]["Year"]))
             .attr("cy", yScale(self.worldData[i]["Brazil"]))
-            .attr("fill", "#6f919a")
+            .attr("fill", "black") 
             .attr("r", function(){
                 if(country === "Brazil"){
                     return 4;
@@ -116,7 +116,7 @@ CentralChart.prototype.init = function(country){
             .append("circle")
             .attr("cx", xScale(self.worldData[i]["Year"]))
             .attr("cy", yScale(self.worldData[i]["Philippines"]))
-            .attr("fill", "#a5cd0e")
+            .attr("fill", "black") 
             .attr("r", function(){
                 if(country === "Philippines"){
                     return 4;
@@ -136,7 +136,7 @@ CentralChart.prototype.init = function(country){
             .append("circle")
             .attr("cx", xScale(self.worldData[i]["Year"]))
             .attr("cy", yScale(self.worldData[i]["United Kingdom"]))
-            .attr("fill", "#9193d2")
+            .attr("fill", "black") 
             .attr("r", function(){
                 if(country === "United Kingdom"){
                     return 4;
@@ -155,7 +155,7 @@ CentralChart.prototype.init = function(country){
             .append("circle")
             .attr("cx", xScale(self.worldData[i]["Year"]))
             .attr("cy", yScale(self.worldData[i]["Portugal"]))
-            .attr("fill", "#a84fd9")
+            .attr("fill", "black") 
             .attr("r", function(){
                 if(country === "Portugal"){
                     return 4;
@@ -174,7 +174,7 @@ CentralChart.prototype.init = function(country){
             .append("circle")
             .attr("cx", xScale(self.worldData[i]["Year"]))
             .attr("cy", yScale(self.worldData[i]["Mexico"]))
-            .attr("fill", "#27ccef")
+            .attr("fill", "black") 
             .attr("r", function(){
                 if(country === "Mexico"){
                     return 4;
@@ -193,7 +193,7 @@ CentralChart.prototype.init = function(country){
             .append("circle")
             .attr("cx", xScale(self.worldData[i]["Year"]))
             .attr("cy", yScale(self.worldData[i]["Bulgaria"]))
-            .attr("fill", "#3108a3")
+            .attr("fill", "black") 
             .attr("r", function(){
                 if(country === "Bulgaria"){
                     return 4;
@@ -212,7 +212,7 @@ CentralChart.prototype.init = function(country){
             .append("circle")
             .attr("cx", xScale(self.worldData[i]["Year"]))
             .attr("cy", yScale(self.worldData[i]["South Africa"]))
-            .attr("fill", "#d64023")
+            .attr("fill", "black") 
             .attr("r", function(){
                 if(country === "South Africa"){
                     return 4;
@@ -231,7 +231,7 @@ CentralChart.prototype.init = function(country){
             .append("circle")
             .attr("cx", xScale(self.worldData[i]["Year"]))
             .attr("cy", yScale(self.worldData[i]["Korea, Dem. People’s Rep."]))
-            .attr("fill", "#0ec07b")
+            .attr("fill", "black") 
             .attr("r", function(){
                 if(country === "Korea, Dem. People’s Rep."){
                     return 4;
@@ -250,7 +250,7 @@ CentralChart.prototype.init = function(country){
             .append("circle")
             .attr("cx", xScale(self.worldData[i]["Year"]))
             .attr("cy", yScale(self.worldData[i]["Germany"]))
-            .attr("fill", "#ff0461")
+            .attr("fill", "black") 
             .attr("r", function(){
                 if(country === "Germany"){
                     return 4;
@@ -269,7 +269,7 @@ CentralChart.prototype.init = function(country){
             .append("circle")
             .attr("cx", xScale(self.worldData[i]["Year"]))
             .attr("cy", yScale(self.worldData[i]["Venezuela, RB"]))
-            .attr("fill", "#2a9e04")
+            .attr("fill", "black") 
             .attr("r", function(){
                 if(country === "Venezuela, RB"){
                     return 4;
@@ -288,7 +288,7 @@ CentralChart.prototype.init = function(country){
             .append("circle")
             .attr("cx", xScale(self.worldData[i]["Year"]))
             .attr("cy", yScale(self.worldData[i]["Italy"]))
-            .attr("fill", "#8c74d1")
+            .attr("fill", "black") 
             .attr("r", function(){
                 if(country === "Italy"){
                     return 4;
@@ -307,7 +307,7 @@ CentralChart.prototype.init = function(country){
             .append("circle")
             .attr("cx", xScale(self.worldData[i]["Year"]))
             .attr("cy", yScale(self.worldData[i]["Ukraine"]))
-            .attr("fill", "#215988")
+            .attr("fill", "black") 
             .attr("r", function(){
                 if(country === "Ukraine"){
                     return 4;
@@ -326,7 +326,7 @@ CentralChart.prototype.init = function(country){
             .append("circle")
             .attr("cx", xScale(self.worldData[i]["Year"]))
             .attr("cy", yScale(self.worldData[i]["Argentina"]))
-            .attr("fill", "#d1c041")
+            .attr("fill", "black") 
             .attr("r", function(){
                 if(country === "Argentina"){
                     return 4;
@@ -357,14 +357,14 @@ CentralChart.prototype.init = function(country){
                     return "black";
                 }
             })
-            .attr("fill", "#818b92")
+            .attr("fill", "#e41a1c") 
 
         nodes = node
             .enter()
             .append("circle")
             .attr("cx", xScale(self.worldData[i]["Year"]))
             .attr("cy", yScale(self.worldData[i]["Australia"]))
-            .attr("fill", "#294335")
+            .attr("fill", "black") 
             .attr("r", function(){
                 if(country === "Australia"){
                     return 4;
@@ -384,7 +384,7 @@ CentralChart.prototype.init = function(country){
             .append("circle")
             .attr("cx", xScale(self.worldData[i]["Year"]))
             .attr("cy", yScale(self.worldData[i]["Russian Federation"]))
-            .attr("fill", "#2ddd59")
+            .attr("fill", "black") 
             .attr("r", function(){
                 if(country === "Russian Federation"){
                     return 4;
@@ -448,7 +448,12 @@ CentralChart.prototype.update = function(country) {
             .append("circle")
             .attr("cx", xScale(self.worldData[i]["Year"]))
             .attr("cy", yScale(self.worldData[i]["Lithuania"]))
-            .attr("fill", "#15e10e") 
+            // .attr("fill", "grey") 
+            .attr("fill", function(){
+                if(country === "Lithuania"){
+                    return "#e41a1c";
+                }
+            })
             .attr("r", function(){
                 if(country === "Lithuania"){
                     return 4;
@@ -467,8 +472,11 @@ CentralChart.prototype.update = function(country) {
             .append("circle")
             .attr("cx", xScale(self.worldData[i]["Year"]))
             .attr("cy", yScale(self.worldData[i]["Greece"]))
-            .attr("fill", "#afb668") 
-            .attr("r", function(){
+            .attr("fill", function(){
+                if(country === "Greece"){
+                    return "#e41a1c";
+                }
+            })            .attr("r", function(){
                 if(country === "Greece"){
                     return 4;
                 } else {
@@ -486,7 +494,11 @@ CentralChart.prototype.update = function(country) {
             .append("circle")
             .attr("cx", xScale(self.worldData[i]["Year"]))
             .attr("cy", yScale(self.worldData[i]["Bangladesh"]))
-            .attr("fill", "#fec699") 
+            .attr("fill", function(){
+                if(country === "Bangladesh"){
+                    return "#e41a1c";
+                }
+            })            
             .attr("r", function(){
                 if(country === "Bangladesh"){
                     return 4;
@@ -505,7 +517,11 @@ CentralChart.prototype.update = function(country) {
             .append("circle")
             .attr("cx", xScale(self.worldData[i]["Year"]))
             .attr("cy", yScale(self.worldData[i]["Brazil"]))
-            .attr("fill", "#6f919a")
+            .attr("fill", function(){
+                if(country === "Brazil"){
+                    return "#e41a1c";
+                }
+            })             
             .attr("r", function(){
                 if(country === "Brazil"){
                     return 4;
@@ -524,8 +540,12 @@ CentralChart.prototype.update = function(country) {
             .enter()
             .append("circle")
             .attr("cx", xScale(self.worldData[i]["Year"]))
-            .attr("cy", yScale(self.worldData[i]["Philippines"]))
-            .attr("fill", "#a5cd0e")
+            .attr("cy", yScale(self.worldData[i]["Philippines"])) 
+            .attr("fill", function(){
+                if(country === "Philippines"){
+                    return "#e41a1c";
+                }
+            })     
             .attr("r", function(){
                 if(country === "Philippines"){
                     return 4;
@@ -545,7 +565,11 @@ CentralChart.prototype.update = function(country) {
             .append("circle")
             .attr("cx", xScale(self.worldData[i]["Year"]))
             .attr("cy", yScale(self.worldData[i]["United Kingdom"]))
-            .attr("fill", "#9193d2")
+            .attr("fill", function(){
+                if(country === "United Kingdom"){
+                    return "#e41a1c";
+                }
+            })  
             .attr("r", function(){
                 if(country === "United Kingdom"){
                     return 4;
@@ -564,7 +588,11 @@ CentralChart.prototype.update = function(country) {
             .append("circle")
             .attr("cx", xScale(self.worldData[i]["Year"]))
             .attr("cy", yScale(self.worldData[i]["Portugal"]))
-            .attr("fill", "#a84fd9")
+            .attr("fill", function(){
+                if(country === "Portugal"){
+                    return "#e41a1c";
+                }
+            })
             .attr("r", function(){
                 if(country === "Portugal"){
                     return 4;
@@ -583,7 +611,11 @@ CentralChart.prototype.update = function(country) {
             .append("circle")
             .attr("cx", xScale(self.worldData[i]["Year"]))
             .attr("cy", yScale(self.worldData[i]["Mexico"]))
-            .attr("fill", "#27ccef")
+            .attr("fill", function(){
+                if(country === "Mexico"){
+                    return "#e41a1c";
+                }
+            })            
             .attr("r", function(){
                 if(country === "Mexico"){
                     return 4;
@@ -602,7 +634,11 @@ CentralChart.prototype.update = function(country) {
             .append("circle")
             .attr("cx", xScale(self.worldData[i]["Year"]))
             .attr("cy", yScale(self.worldData[i]["Bulgaria"]))
-            .attr("fill", "#3108a3")
+            .attr("fill", function(){
+                if(country === "Bulgaria"){
+                    return "#e41a1c";
+                }
+            })     
             .attr("r", function(){
                 if(country === "Bulgaria"){
                     return 4;
@@ -621,7 +657,11 @@ CentralChart.prototype.update = function(country) {
             .append("circle")
             .attr("cx", xScale(self.worldData[i]["Year"]))
             .attr("cy", yScale(self.worldData[i]["South Africa"]))
-            .attr("fill", "#d64023")
+            .attr("fill", function(){
+                if(country === "South Africa"){
+                    return "#e41a1c";
+                }
+            })  
             .attr("r", function(){
                 if(country === "South Africa"){
                     return 4;
@@ -640,7 +680,11 @@ CentralChart.prototype.update = function(country) {
             .append("circle")
             .attr("cx", xScale(self.worldData[i]["Year"]))
             .attr("cy", yScale(self.worldData[i]["Korea, Dem. People’s Rep."]))
-            .attr("fill", "#0ec07b")
+            .attr("fill", function(){
+                if(country === "Korea, Dem. People’s Rep."){
+                    return "#e41a1c";
+                }
+            })  
             .attr("r", function(){
                 if(country === "Korea, Dem. People’s Rep."){
                     return 4;
@@ -659,7 +703,11 @@ CentralChart.prototype.update = function(country) {
             .append("circle")
             .attr("cx", xScale(self.worldData[i]["Year"]))
             .attr("cy", yScale(self.worldData[i]["Germany"]))
-            .attr("fill", "#ff0461")
+            .attr("fill", function(){
+                if(country === "Germany"){
+                    return "#e41a1c";
+                }
+            })  
             .attr("r", function(){
                 if(country === "Germany"){
                     return 4;
@@ -678,7 +726,11 @@ CentralChart.prototype.update = function(country) {
             .append("circle")
             .attr("cx", xScale(self.worldData[i]["Year"]))
             .attr("cy", yScale(self.worldData[i]["Venezuela, RB"]))
-            .attr("fill", "#2a9e04")
+            .attr("fill", function(){
+                if(country === "Venezuela, RB"){
+                    return "#e41a1c";
+                }
+            })  
             .attr("r", function(){
                 if(country === "Venezuela, RB"){
                     return 4;
@@ -697,7 +749,11 @@ CentralChart.prototype.update = function(country) {
             .append("circle")
             .attr("cx", xScale(self.worldData[i]["Year"]))
             .attr("cy", yScale(self.worldData[i]["Italy"]))
-            .attr("fill", "#8c74d1")
+            .attr("fill", function(){
+                if(country === "Italy"){
+                    return "#e41a1c";
+                }
+            })   
             .attr("r", function(){
                 if(country === "Italy"){
                     return 4;
@@ -716,7 +772,11 @@ CentralChart.prototype.update = function(country) {
             .append("circle")
             .attr("cx", xScale(self.worldData[i]["Year"]))
             .attr("cy", yScale(self.worldData[i]["Ukraine"]))
-            .attr("fill", "#215988")
+            .attr("fill", function(){
+                if(country === "Ukraine"){
+                    return "#e41a1c";
+                }
+            })  
             .attr("r", function(){
                 if(country === "Ukraine"){
                     return 4;
@@ -735,7 +795,11 @@ CentralChart.prototype.update = function(country) {
             .append("circle")
             .attr("cx", xScale(self.worldData[i]["Year"]))
             .attr("cy", yScale(self.worldData[i]["Argentina"]))
-            .attr("fill", "#d1c041")
+            .attr("fill", function(){
+                if(country === "Argentina"){
+                    return "#e41a1c";
+                }
+            })  
             .attr("r", function(){
                 if(country === "Argentina"){
                     return 4;
@@ -766,14 +830,22 @@ CentralChart.prototype.update = function(country) {
                     return "black";
                 }
             })
-            .attr("fill", "#818b92")
+            .attr("fill", function(){
+                if(country === "Japan"){
+                    return "#e41a1c";
+                }
+            })   
 
         nodes = node
             .enter()
             .append("circle")
             .attr("cx", xScale(self.worldData[i]["Year"]))
             .attr("cy", yScale(self.worldData[i]["Australia"]))
-            .attr("fill", "#294335")
+            .attr("fill", function(){
+                if(country === "Australia"){
+                    return "#e41a1c";
+                }
+            })  
             .attr("r", function(){
                 if(country === "Australia"){
                     return 4;
@@ -793,7 +865,11 @@ CentralChart.prototype.update = function(country) {
             .append("circle")
             .attr("cx", xScale(self.worldData[i]["Year"]))
             .attr("cy", yScale(self.worldData[i]["Russian Federation"]))
-            .attr("fill", "#2ddd59")
+            .attr("fill", function(){
+                if(country === "Russian Federation"){
+                    return "#e41a1c";
+                }
+            })   
             .attr("r", function(){
                 if(country === "Russian Federation"){
                     return 4;

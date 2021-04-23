@@ -8,14 +8,26 @@ experimentBtn.addEventListener("click", function(){
 });
 
 let endExperimentBtn = document.querySelector("#end-experiment");
+ 
 
-endExperimentBtn.addEventListener("click", function(){
+// endExperimentBtn.addEventListener("click", function(){
+//     document.getElementById("experiment-page").style.display = "none";
+//     document.getElementById("questions").style.display = "block"; 
+// });
+
+function myFunction() {
     document.getElementById("experiment-page").style.display = "none";
     document.getElementById("questions").style.display = "block"; 
-    // document.querySelector(".generate-id").innerHTML = randomId;
-});
+  }
 
 let endTaskBtn = document.querySelector("#end-task");
+
+// endTaskBtn.addEventListener("load", () => setTimeout(function(){
+//     document.getElementById("userid-pop-up").style.visibility = "visible";
+//     document.getElementById("questions").style.display = "none"; 
+//     document.querySelector(".generate-id").innerHTML = randomId;
+// }, 3000)); 
+
 
 endTaskBtn.addEventListener("click", function(){
     document.getElementById("userid-pop-up").style.visibility = "visible";

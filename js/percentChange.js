@@ -56,9 +56,9 @@ PercentChange.prototype.init = function(country) {
         .attr("class", "bar")
         .attr("fill", function(d){
             if(+d["percentChange"] < 0){
-                return "red";
+                return "#e41a1c";
             } else {
-                return "blue";
+                return "#377eb8";
             }
         })
         .attr("x", function(d){ return xScale(+d["year"]); })
@@ -86,10 +86,13 @@ PercentChange.prototype.init = function(country) {
         .scale(yScale)
         .ticks(10)
 
+        
+
     svg.append("g")
         .attr("class", "axis y-axis")
-        .attr("transform", "translate(" + padding + ",0)")
-        .call(yAxis);
+        .attr("transform", "translate(" + 0 + ",178)")
+        .call(yAxis)
+        .call(xAxis);
 }
 
 
@@ -140,9 +143,9 @@ PercentChange.prototype.update = function(country) {
         .attr("class", "bar")
         .attr("fill", function(d){
             if(+d["percentChange"] < 0){
-                return "red";
+                return "#e41a1c";
             } else {
-                return "blue";
+                return "#377eb8";
             }
         })
         .attr("x", function(d){ return xScale(+d["year"]); })
