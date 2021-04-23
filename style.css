@@ -85,6 +85,7 @@ div#experiment-page div.dashboard .container-visualization{
     display: flex;
     height: auto;
     width: 100%;
+
 }
 
 div#experiment-page div.dashboard div.visualization{
@@ -130,6 +131,15 @@ div#questions {
 
 .questions-container{
     overflow: hidden;
+    display: flex;
+    width: 70%;
+    margin: 5% auto;
+    justify-content: space-between;
+}
+
+.data{
+    margin-top: 30px;
+    text-align: left;
 }
 
 #footer {

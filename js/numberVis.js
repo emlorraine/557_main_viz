@@ -2,7 +2,6 @@ function NumberVis(allData, country){
     let self = this;
     self.worldData = allData[1];
     self.world20Data = allData[1];
-    console.log(self.worldData);
     self.init(country);
 };
 
@@ -29,7 +28,6 @@ NumberVis.prototype.init = function(country){
             return diff+ "%";
         })
         .style('fill', function(d){
-            console.log(diff);
             if(+(diff) < 0){
                 return "#e41a1c";
             } else {
