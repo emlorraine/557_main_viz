@@ -9,6 +9,10 @@ experimentBtn.addEventListener("click", function(){
 
 let endExperimentBtn = document.querySelector("#end-experiment");
  
+endExperimentBtn.addEventListener("click", function() {
+    document.getElementById("experiment-page").style.display = "none";
+    document.getElementById("questions").style.display = "block"; 
+});
 
 // endExperimentBtn.addEventListener("click", function(){
 //     document.getElementById("experiment-page").style.display = "none";
@@ -16,9 +20,9 @@ let endExperimentBtn = document.querySelector("#end-experiment");
 // });
 
 function myFunction() {
-    document.getElementById("experiment-page").style.display = "none";
-    document.getElementById("questions").style.display = "block"; 
-  }
+    console.log("Hi");
+    document.querySelector(".endAnalysis").classList.remove("disabled");
+}
 
 let endTaskBtn = document.querySelector("#end-task");
 
@@ -49,7 +53,9 @@ function update(){
     Promise.all(promises).then(function (values) {
         var centralChart = new CentralChart(values); 
         var percentChange = new PercentChange(values); 
+        var numberVis = new NumberVis(values, selectedValue); 
         percentChange.update(selectedValue);
         centralChart.update(selectedValue);
+        // numberVis.update(selectedValue);
     })
 }
