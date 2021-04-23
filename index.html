@@ -20,14 +20,13 @@
         <p> The data collected from this survey will remain anonymous. Thank you for taking the time to participate in this study.</p>
     </div>
     <div class="btn-container">
-        <button class="btn btn-primary go-to-experiment">Start</button>
+        <button onclick="setTimeout(myFunction, 60000)" class="btn btn-primary go-to-experiment">Start</button>
     </div>
 </div>
 
 <!-- Experiment -->
 <div id="experiment-page">
     <div class="text-bar">
-        <h1>World Population from 2000 to 2019</h1>
         <div class="user-control">
             <select onchange="update()" id="country-selected" class="form-control">
                 <option value="Japan">Japan</option>
@@ -44,40 +43,44 @@
                 <option value="Portugal">Portugal</option>
                 <option value="Mexico">Mexico</option>
                 <option value="Greece">Greece</option>
-                <!-- <option value="Egypt, Arab Rep.">Egypt, Arab Rep.</option> -->
                 <option value="Russian Federation">Russian Federation</option>
                 <option value="South Africa">South Africa</option>
                 <option value="Argentina">Argentina</option>
-                <!-- <option value="Nigeria">Nigeria</option> -->
                 <option value="Australia">Australia</option>
                 <option value="Bulgaria">Bulgaria</option>
                 
             </select>
         </div>
     </div>
+
+    <div class="numbervis">
+        <center><h4>Population Change from 2000 to 2019</h4></center>
+        <div class="numberPercentChange" class="view">
+            <svg class="numberPercentCahngesvg"></svg>
+        </div>
+    </div>
     <div class="dashboard">
+
         <div class="visualization">
             <center><h4>Population from 2000 to 2019</h4></center>
             <div class="world-pop-chart" class="view">
                 <svg class="worldsvg"></svg>
             </div>
         </div>
-        <!-- We can add more visualizations here as we want -->
+
         <div class="visualization">
-            <center><h4>Percent Change in Population from 2000 - 2019</h4></center>
+            <center><h4>Percent Change Over Year</h4></center>
             <div class="percentChange" class="view">
                 <svg class="percentCahngesvg"></svg>
             </div>
-        </div>
-        <p id="footer">Data source: World Bank</p>
+        </div>    
+        <!-- We can add more visualizations here as we want -->
     </div>
     <div class="text-bar"> 
         <p>Note: You can move to the next screen and end analysis after 60 seconds.</p>
-        <button onclick="setTimeout(myFunction, 60000)">
-            <a href="#" class="btn btn-primary" id="end-experiment">END ANALYSIS</a>
-        </button>
-        
+        <a href="#" class="btn btn-primary endAnalysis disabled" id="end-experiment">END ANALYSIS</a>
     </div>
+    <p id="footer"><b>Data source:</b> World Bank</p>
 </div>
 
 <!-- Questions -->
@@ -106,6 +109,7 @@
 <script src="js/interactions.js"></script>
 <script type="application/javascript" src="js/central.js"></script>
 <script type="application/javascript" src="js/percentChange.js"></script>
+<script type="application/javascript" src="js/numberVis.js"></script>
 <script type="application/javascript" src="js/main.js"></script>
 
 </body>

@@ -2,6 +2,7 @@ function PercentChange(allData){
     let self = this;
     self.worldData = allData[1];
     self.world20Data = allData[1];
+    console.log(self.worldData);
     self.init("Japan");
 };
 
