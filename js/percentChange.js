@@ -89,10 +89,12 @@ PercentChange.prototype.init = function(country) {
         
 
     svg.append("g")
-        .attr("class", "axis y-axis")
-        .attr("transform", "translate(" + 0 + ",178)")
+        // .attr("class", "axis y-axis")
+        .attr("transform", "translate(30,0)")
         .call(yAxis)
-        .call(xAxis);
+    svg.append("g")
+        .attr("transform", "translate(-4,181)")
+        .call(xAxis)
 }
 
 
