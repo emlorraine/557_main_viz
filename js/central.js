@@ -2,7 +2,7 @@ function CentralChart(allData, country){
     let self = this;
     self.worldData = allData[1];
     self.world20Data = allData[1];
-    self.init("Japan");
+    self.init("Ukraine");
 };
 
 CentralChart.prototype.init = function(country){

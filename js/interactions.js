@@ -2,6 +2,7 @@
 let randomId = Math.floor(Math.random() * 10000) + 1; 
 let totalSeconds = 0;
 let dropDownUpdates = 0;
+let exploredCountries = {};
 
 //Counting the seconds of user 
 var myTimer;
@@ -29,6 +30,11 @@ endExperimentBtn.addEventListener("click", function() {
     document.getElementById("userTime").innerHTML = totalSeconds;
     document.getElementById("userUpdates").innerHTML = dropDownUpdates;
     clearTimeout(myTimer);
+    let str = "";
+    for(let key in exploredCountries){
+        str+= '<li><u>' +  key + "</u>: " + exploredCountries[key] + "</li>"
+    }
+    document.getElementById("countriesExplored").innerHTML = str;
 });
 
 function myFunction() {
@@ -48,6 +54,12 @@ function update(){
     });
 
     dropDownUpdates+=1; 
+
+    if(exploredCountries.hasOwnProperty(selectedValue)){
+        exploredCountries[selectedValue] += 1;
+    } else {
+        exploredCountries[selectedValue] = 1;
+    }
 
     Promise.all(promises).then(function (values) {
         var centralChart = new CentralChart(values); 

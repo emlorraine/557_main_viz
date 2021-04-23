@@ -29,12 +29,12 @@
     <div class="text-bar">
         <div class="user-control">
             <select onchange="update()" id="country-selected" class="form-control">
+                <option value="Ukraine">Ukraine</option>
                 <option value="Japan">Japan</option>
                 <option value="Korea, Dem. People’s Rep.">Korea, Dem. People’s Rep.</option>
                 <option value="Germany">Germany</option>
                 <option value="Venezuela, RB">Venezuela, RB</option>
                 <option value="Italy">Italy</option>
-                <option value="Ukraine">Ukraine</option>
                 <option value="Bangladesh">Bangladesh</option>
                 <option value="Romania">Romania</option>
                 <option value="Lithuania">Lithuania</option>
@@ -95,6 +95,10 @@
                 <p><b>ID:</b> <span id="userID"></span></p>
                 <p><b>Time spent on the visualization: </b> <span id="userTime"></span> seconds</p>
                 <p><b># of times you updated the visualization: </b> <span id="userUpdates"></span></p>
+                <p><b>Countries you've explored: </b></p>
+                <div class="explored-container">
+                    <ul id="countriesExplored"></ul>
+                </div>
             </div>
         </div>
         <!-- <a href="#" class="btn btn-primary" id="end-task">Get ID</a> -->

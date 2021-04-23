@@ -2,7 +2,7 @@ function PercentChange(allData){
     let self = this;
     self.worldData = allData[1];
     self.world20Data = allData[1];
-    self.init("Japan");
+    self.init("Ukraine");
 };
 
 PercentChange.prototype.init = function(country) {
