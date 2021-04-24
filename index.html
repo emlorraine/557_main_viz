@@ -86,10 +86,20 @@
 <!-- Questions -->
 <div id="questions">
     <div class="questions-container">
-        <div>
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSftEbCYYZz5EJdZYWEHQ1d5dpzySXekOWI-jAxClquEvseMnw/viewform?embedded=true" width="640" height="471" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        <div id="questions-list">
+            <h1>Questions:</h1>
+            <div id="question1">
+                <p>1. By how much do you think the world population will change by 2050? Please enter your answer in the form of a percentage.</p>
+                <div class="input-group">
+                    <input id="q1-answer" type="text" class="form-control" aria-label="Amount (to the nearest percentage)" required>
+                    <div class="input-group-append">
+                      <span class="input-group-text">%</span>
+                    </div>
+                  </div>
+            </div>
+            <!-- <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSftEbCYYZz5EJdZYWEHQ1d5dpzySXekOWI-jAxClquEvseMnw/viewform?embedded=true" width="640" height="471" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe> -->
         </div>
-        <div >
+        <div class="data-container">
             <h1>Your Data:</h1>
             <div class="data">
                 <p><b>ID:</b> <span id="userID"></span></p>
@@ -101,21 +111,25 @@
                 </div>
             </div>
         </div>
-        <!-- <a href="#" class="btn btn-primary" id="end-task">Get ID</a> -->
+    </div>
+    <div class="text-bar send-data-btn"> 
+        <a href="#" class="btn btn-primary" id="send-task">SUBMIT</a>
     </div>
 </div>
+
+<!-- How do you think the world population will change by 2050? Please enter your answer in the form of a percentage. -->
 
 <!-- End pop-up -->
 <div id="userid-pop-up">
     <div class="text-container">
-        <h1>Thank you:</h1>
-        <p>Here is you id:</p>
-    </div>
-    <div class="id-container">
-        <p class="generate-id"></p>
+        <h1>Thank you!</h1>
+        <p>Your data was successfully submited! Thanks again for your time!</p>
     </div>
 </div>
 
+
+<!-- Javascript Files, we've included JQuery here, feel free to use at your discretion. Add whatever else you may need here too. -->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 
 <script src="js/interactions.js"></script>
 <script type="application/javascript" src="js/central.js"></script>
