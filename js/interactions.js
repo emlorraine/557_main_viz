@@ -2,7 +2,28 @@
 let randomId = Math.floor(Math.random() * 10000) + 1; 
 let totalSeconds = 0;
 let dropDownUpdates = 0;
-let exploredCountries = {};
+let exploredCountries = {
+    "Ukraine": 1,
+    "Japan": 0,
+    "Korea": 0,
+    "Germany": 0,
+    "Venezuela": 0,
+    "Italy": 0,
+    "Bangladesh": 0,
+    "Romania": 0,
+    "Lithuania": 0,
+    "Philippines": 0,
+    "United Kingdom": 0,
+    "Portugal": 0,
+    "Mexico": 0,
+    "Greece": 0,
+    "Russia": 0,
+    "Poland": 0,
+    "Argentina": 0,
+    "Australia": 0,
+    "Bulgaria": 0,
+    "Brazil": 0
+};
 
 //Counting the seconds of user 
 var myTimer;
@@ -30,12 +51,36 @@ endExperimentBtn.addEventListener("click", function() {
     document.getElementById("userTime").innerHTML = totalSeconds;
     document.getElementById("userUpdates").innerHTML = dropDownUpdates;
     clearTimeout(myTimer);
+
     let str = "";
     for(let key in exploredCountries){
-        str+= '<li><u>' +  key + "</u>: " + exploredCountries[key] + "</li>"
+        if(exploredCountries[key] >= 1){
+            str+= '<li><u>' +  key + "</u>: " + exploredCountries[key] + "</li>"
+        }
     }
     document.getElementById("countriesExplored").innerHTML = str;
+    
 });
+
+let sendDataBtn = document.querySelector("#send-task");
+
+sendDataBtn.addEventListener("click", function(){
+
+    let question1 = document.getElementById("q1-answer").value;
+
+    $.ajax({
+        url: "backend/proxy.php",
+        method: "post",
+        data: {"userID": randomId, "time": totalSeconds, "changes": dropDownUpdates, "countryData": exploredCountries, "question1": question1},
+        async: true,
+        success: function(res){
+            console.log(res);
+        }
+    });
+
+    document.getElementById("userid-pop-up").style.visibility = "visible";
+    document.getElementById("questions").style.display = "none"; 
+})
 
 function myFunction() {
     document.querySelector(".endAnalysis").classList.remove("disabled");
@@ -54,12 +99,8 @@ function update(){
     });
 
     dropDownUpdates+=1; 
-
-    if(exploredCountries.hasOwnProperty(selectedValue)){
-        exploredCountries[selectedValue] += 1;
-    } else {
-        exploredCountries[selectedValue] = 1;
-    }
+    exploredCountries[selectedValue] += 1;
+ 
 
     Promise.all(promises).then(function (values) {
         var centralChart = new CentralChart(values); 
