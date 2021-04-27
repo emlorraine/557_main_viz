@@ -171,17 +171,31 @@ PercentChange.prototype.update = function(country) {
                     .style("opacity", 0)
             }) 
 
-    //Axis
+    // //Axis
+	// let xAxis = d3.axisBottom()
+    //     .scale(xScale)
+
+    // let yAxis = d3.axisLeft()
+    //     .scale(yScale)
+    //     .ticks(10)
+
+    // svg.selectAll(".y-axis")
+    //     .attr("transform", "translate(" + padding + ",0)")
+    //     .call(yAxis);
+
+
+       //Axis
 	let xAxis = d3.axisBottom()
-        .scale(xScale)
+    .scale(xScale)
 
-    let yAxis = d3.axisLeft()
-        .scale(yScale)
-        .ticks(10)
+let yAxis = d3.axisLeft()
+    .scale(yScale)
+    .ticks(10)
 
-    svg.selectAll(".y-axis")
-        .attr("transform", "translate(" + padding + ",0)")
-        .call(yAxis);
+let position =   self.svgHeight-35;
+svg.append("g")
+    .attr("transform", "translate(-4,"+(position/2)+")")
+    .call(xAxis)
 }
 
 
