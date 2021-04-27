@@ -182,3 +182,7 @@ button:focus {
     width: 85px;
     margin: 0 auto;
 }
+.tooltip-inner {
+    max-width: 100% !important;
+}
+

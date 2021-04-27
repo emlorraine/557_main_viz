@@ -69,7 +69,7 @@ PercentChange.prototype.init = function(country) {
             tooltip
                 .style("opacity", 1)
             tooltip
-                .html("<h4>Year: " + d["year"] +  "</h4>  <h4>% Change: "+ d["percentChange"].toFixed(2) + "</h4>")
+                .html("<h6>Year: " + d["year"] +  "</h6>  <h6>% Change: "+ d["percentChange"].toFixed(2) + "</h6>")
                 .style("left", (event.pageX+30) + "px")
                 .style("top", (event.pageY+30) + "px")
             })
@@ -110,10 +110,12 @@ PercentChange.prototype.update = function(country) {
         .attr("class", "tooltip")
         .style("background-color", "#fff")
         .style("border", "solid")
-        .style("border-width", "3px")
-        .style("padding", "4px")
+        // .style("border-width", "3px")
+        // .style("padding", "4px")
         .style("position", "absolute")
-        .style("border-radius", "6px")    
+        // .style("border-radius", "6px")   
+        .attr( 'width', "100px")
+        .attr( 'height', "75px"); 
 
     let svg = d3.selectAll(".percentCahngesvg");
 
@@ -160,7 +162,7 @@ PercentChange.prototype.update = function(country) {
             tooltip
                 .style("opacity", 1)
             tooltip
-                .html("<h4>Year: " + d["year"] +  "</h4>  <h4>% Change: "+ d["percentChange"].toFixed(2) + "</h4>")
+                .html("<h6>Year: " + d["year"] +  "</h6>  <h6>% Change: "+ d["percentChange"].toFixed(2) + "</h6>")
                 .style("left", (event.pageX+30) + "px")
                 .style("top", (event.pageY+30) + "px")
             })
