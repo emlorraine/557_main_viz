@@ -43,7 +43,7 @@ CentralChart.prototype.init = function(country){
             .attr("cy", yScale(self.worldData[i]["Lithuania"]))
             .attr("fill", function(){
                 if(country === "Lithuania"){
-                    return "#e41a1c";
+                    return "#5e3c99";
                 } else {
                     return "#FFDEAD";
                 }
@@ -57,7 +57,7 @@ CentralChart.prototype.init = function(country){
             })
             .style("stroke", function(){
                 if(country === "Lithuania"){
-                    return "#e41a1c";
+                    return "#5e3c99";
                 }
             })
 
@@ -68,7 +68,7 @@ CentralChart.prototype.init = function(country){
             .attr("cy", yScale(self.worldData[i]["Greece"]))
             .attr("fill", function(){
                 if(country === "Greece"){
-                    return "#e41a1c";
+                    return "#5e3c99";
                 } else {
                     return "#FFDEAD";
                 }
@@ -82,7 +82,7 @@ CentralChart.prototype.init = function(country){
             })
             .style("stroke", function(){
                 if(country === "Greece"){
-                    return "#e41a1c";
+                    return "#5e3c99";
                 }
             })
 
@@ -93,7 +93,7 @@ CentralChart.prototype.init = function(country){
             .attr("cy", yScale(self.worldData[i]["Bangladesh"]))
             .attr("fill", function(){
                 if(country === "Bangladesh"){
-                    return "#e41a1c";
+                    return "#5e3c99";
                 } else {
                     return "#FFDEAD";
                 }
@@ -107,7 +107,7 @@ CentralChart.prototype.init = function(country){
             })
             .style("stroke", function(){
                 if(country === "Bangladesh"){
-                    return "#e41a1c";
+                    return "#5e3c99";
                 }
             })
 
@@ -118,7 +118,7 @@ CentralChart.prototype.init = function(country){
             .attr("cy", yScale(self.worldData[i]["Romania"]))
             .attr("fill", function(){
                 if(country === "Romania"){
-                    return "#e41a1c";
+                    return "#5e3c99";
                 } else {
                     return "#FFDEAD";
                 }
@@ -132,7 +132,7 @@ CentralChart.prototype.init = function(country){
             })
             .style("stroke", function(){
                 if(country === "Romania"){
-                    return "#e41a1c";
+                    return "#5e3c99";
                 }
             })
             
@@ -144,7 +144,7 @@ CentralChart.prototype.init = function(country){
             .attr("cy", yScale(self.worldData[i]["Philippines"]))
             .attr("fill", function(){
                 if(country === "Philippines"){
-                    return "#e41a1c";
+                    return "#5e3c99";
                 } else {
                     return "#FFDEAD";
                 }
@@ -158,7 +158,7 @@ CentralChart.prototype.init = function(country){
             })
             .style("stroke", function(){
                 if(country === "Philippines"){
-                    return "#e41a1c";
+                    return "#5e3c99";
                 }
             })
 
@@ -170,7 +170,7 @@ CentralChart.prototype.init = function(country){
             .attr("cy", yScale(self.worldData[i]["United Kingdom"]))
             .attr("fill", function(){
                 if(country === "United Kingdom"){
-                    return "#e41a1c";
+                    return "#5e3c99";
                 } else {
                     return "#FFDEAD";
                 }
@@ -184,7 +184,7 @@ CentralChart.prototype.init = function(country){
             })
             .style("stroke", function(){
                 if(country === "United Kingdom"){
-                    return "#e41a1c";
+                    return "#5e3c99";
                 }
             })
 
@@ -195,7 +195,7 @@ CentralChart.prototype.init = function(country){
             .attr("cy", yScale(self.worldData[i]["Portugal"]))
             .attr("fill", function(){
                 if(country === "Portugal"){
-                    return "#e41a1c";
+                    return "#5e3c99";
                 } else {
                     return "#FFDEAD";
                 }
@@ -209,7 +209,7 @@ CentralChart.prototype.init = function(country){
             })
             .style("stroke", function(){
                 if(country === "Portugal"){
-                    return "#e41a1c";
+                    return "#5e3c99";
                 }
             })
 
@@ -220,7 +220,7 @@ CentralChart.prototype.init = function(country){
             .attr("cy", yScale(self.worldData[i]["Mexico"]))
             .attr("fill", function(){
                 if(country === "Mexico"){
-                    return "#e41a1c";
+                    return "#5e3c99";
                 } else {
                     return "#FFDEAD";
                 }
@@ -234,7 +234,7 @@ CentralChart.prototype.init = function(country){
             })
             .style("stroke", function(){
                 if(country === "Mexico"){
-                    return "#e41a1c";
+                    return "#5e3c99";
                 }
             })
 
@@ -245,7 +245,7 @@ CentralChart.prototype.init = function(country){
             .attr("cy", yScale(self.worldData[i]["Bulgaria"]))
             .attr("fill", function(){
                 if(country === "Bulgaria"){
-                    return "#e41a1c";
+                    return "#5e3c99";
                 } else {
                     return "#FFDEAD";
                 }
@@ -259,7 +259,7 @@ CentralChart.prototype.init = function(country){
             })
             .style("stroke", function(){
                 if(country === "Bulgaria"){
-                    return "#e41a1c";
+                    return "#5e3c99";
                 }
             })
 
@@ -270,7 +270,7 @@ CentralChart.prototype.init = function(country){
             .attr("cy", yScale(self.worldData[i]["Poland"]))
             .attr("fill", function(){
                 if(country === "Poland"){
-                    return "#e41a1c";
+                    return "#5e3c99";
                 } else {
                     return "#FFDEAD";
                 }
@@ -284,7 +284,7 @@ CentralChart.prototype.init = function(country){
             })
             .style("stroke", function(){
                 if(country === "Poland"){
-                    return "#e41a1c";
+                    return "#5e3c99";
                 }
             })
 
@@ -296,7 +296,7 @@ CentralChart.prototype.init = function(country){
             .attr("fill", function(){
                 if(country === "Korea, Dem. People’s Rep."){
                     d3.select(this).raise(); 
-                    return "#e41a1c";
+                    return "#5e3c99";
                 } else {
                     return "#FFDEAD";
                 }
@@ -310,9 +310,10 @@ CentralChart.prototype.init = function(country){
             })
             .style("stroke", function(){
                 if(country === "Korea, Dem. People’s Rep."){
-                    return "#e41a1c";
+                    return "#5e3c99";
                 }
             })
+            
 
         nodes = node
             .enter()
@@ -321,7 +322,7 @@ CentralChart.prototype.init = function(country){
             .attr("cy", yScale(self.worldData[i]["Germany"]))
             .attr("fill", function(){
                 if(country === "Germany"){
-                    return "#e41a1c";
+                    return "#5e3c99";
                 } else {
                     return "#FFDEAD";
                 }
@@ -335,7 +336,7 @@ CentralChart.prototype.init = function(country){
             })
             .style("stroke", function(){
                 if(country === "Germany"){
-                    return "#e41a1c";
+                    return "#5e3c99";
                 }
             })
 
@@ -346,7 +347,7 @@ CentralChart.prototype.init = function(country){
             .attr("cy", yScale(self.worldData[i]["Venezuela, RB"]))
             .attr("fill", function(){
                 if(country === "Venezuela, RB"){
-                    return "#e41a1c";
+                    return "#5e3c99";
                 } else {
                     return "#FFDEAD";
                 }
@@ -360,7 +361,7 @@ CentralChart.prototype.init = function(country){
             })
             .style("stroke", function(){
                 if(country === "Venezuela, RB"){
-                    return "#e41a1c";
+                    return "#5e3c99";
                 }
             })
 
@@ -371,7 +372,7 @@ CentralChart.prototype.init = function(country){
             .attr("cy", yScale(self.worldData[i]["Italy"]))
             .attr("fill", function(){
                 if(country === "Italy"){
-                    return "#e41a1c";
+                    return "#5e3c99";
                 } else {
                     return "#FFDEAD";
                 }
@@ -396,7 +397,7 @@ CentralChart.prototype.init = function(country){
             .attr("cy", yScale(self.worldData[i]["Ukraine"]))
             .attr("fill", function(){
                 if(country === "Ukraine"){
-                    return "#e41a1c";
+                    return "#5e3c99";
                 } else {
                     return "#FFDEAD";
                 }
@@ -410,7 +411,7 @@ CentralChart.prototype.init = function(country){
             })
             .style("stroke", function(){
                 if(country === "Ukraine"){
-                    return "#e41a1c";
+                    return "#5e3c99";
                 }
             })
 
@@ -421,7 +422,7 @@ CentralChart.prototype.init = function(country){
             .attr("cy", yScale(self.worldData[i]["Argentina"]))
             .attr("fill", function(){
                 if(country === "Argentina"){
-                    return "#e41a1c";
+                    return "#5e3c99";
                 } else {
                     return "#FFDEAD";
                 }
@@ -435,7 +436,7 @@ CentralChart.prototype.init = function(country){
             })
             .style("stroke", function(){
                 if(country === "Argentina"){
-                    return "#e41a1c";
+                    return "#5e3c99";
                 }
             })
 
@@ -446,7 +447,7 @@ CentralChart.prototype.init = function(country){
             .attr("cy", yScale(self.worldData[i]["Japan"]))
             .attr("fill", function(){
                 if(country === "Japan"){
-                    return "#e41a1c";
+                    return "#5e3c99";
                 } else {
                     return "#FFDEAD";
                 }
@@ -460,7 +461,7 @@ CentralChart.prototype.init = function(country){
             })
             .style("stroke", function(){
                 if(country === "Japan"){
-                    return "#e41a1c";
+                    return "#5e3c99";
                 }
             })
 
@@ -471,7 +472,7 @@ CentralChart.prototype.init = function(country){
             .attr("cy", yScale(self.worldData[i]["Australia"]))
             .attr("fill", function(){
                 if(country === "Australia"){
-                    return "#e41a1c";
+                    return "#5e3c99";
                 } else {
                     return "#FFDEAD";
                 }
@@ -485,7 +486,7 @@ CentralChart.prototype.init = function(country){
             })
             .style("stroke", function(){
                 if(country === "Australia"){
-                    return "#e41a1c";
+                    return "#5e3c99";
                 }
             })
 
@@ -497,7 +498,7 @@ CentralChart.prototype.init = function(country){
             .attr("cy", yScale(self.worldData[i]["Russian Federation"]))
             .attr("fill", function(){
                 if(country === "Russian Federation"){
-                    return "#e41a1c";
+                    return "#5e3c99";
                 } else {
                     return "#FFDEAD";
                 }
@@ -511,7 +512,7 @@ CentralChart.prototype.init = function(country){
             })
             .style("stroke", function(){
                 if(country === "Russian Federation"){
-                    return "#e41a1c";
+                    return "#5e3c99";
                 }
             })
             
@@ -599,7 +600,7 @@ CentralChart.prototype.update = function(country) {
                     // console.log(selection);
                     // d3.select(this).moveToFront(); 
                     // node.raise(); 
-                    return "#e41a1c";
+                    return "#5e3c99";
                 } else {                    
                     return "#FFDEAD";
                 }
@@ -613,7 +614,7 @@ CentralChart.prototype.update = function(country) {
             })
             .style("stroke", function(){
                 if(country === "Lithuania"){
-                    return "#e41a1c";
+                    return "#5e3c99";
                 }
             })
             .on("mousemove", (event, d) => {  
@@ -640,7 +641,7 @@ CentralChart.prototype.update = function(country) {
             .attr("cy", yScale(self.worldData[i]["Greece"]))
             .attr("fill", function(){
                 if(country === "Greece"){
-                    return "#e41a1c";
+                    return "#5e3c99";
                 } else {
                     return "#FFDEAD";
                 }
@@ -654,7 +655,7 @@ CentralChart.prototype.update = function(country) {
             })
             .style("stroke", function(){
                 if(country === "Greece"){
-                    return "#e41a1c";
+                    return "#5e3c99";
                 }
             })
             .on("mousemove", (event, d) => {  
@@ -680,7 +681,7 @@ CentralChart.prototype.update = function(country) {
             .attr("cy", yScale(self.worldData[i]["Bangladesh"]))
             .attr("fill", function(){
                 if(country === "Bangladesh"){
-                    return "#e41a1c";
+                    return "#5e3c99";
                 } else {
                     return "#FFDEAD";
                 }
@@ -694,7 +695,7 @@ CentralChart.prototype.update = function(country) {
             })
             .style("stroke", function(){
                 if(country === "Bangladesh"){
-                    return "#e41a1c";
+                    return "#5e3c99";
                 }
             })
             .on("mousemove", (event, d) => {  
@@ -720,7 +721,7 @@ CentralChart.prototype.update = function(country) {
             .attr("cy", yScale(self.worldData[i]["Romania"]))
             .attr("fill", function(){
                 if(country === "Romania"){
-                    return "#e41a1c";
+                    return "#5e3c99";
                 } else {
                     return "#FFDEAD";
                 }
@@ -734,7 +735,7 @@ CentralChart.prototype.update = function(country) {
             })
             .style("stroke", function(){
                 if(country === "Romania"){
-                    return "#e41a1c";
+                    return "#5e3c99";
                 }
             })
             .on("mousemove", (event, d) => {  
@@ -761,7 +762,7 @@ CentralChart.prototype.update = function(country) {
             .attr("cy", yScale(self.worldData[i]["Philippines"]))
             .attr("fill", function(){
                 if(country === "Philippines"){
-                    return "#e41a1c";
+                    return "#5e3c99";
                 } else {
                     return "#FFDEAD";
                 }
@@ -775,7 +776,7 @@ CentralChart.prototype.update = function(country) {
             })
             .style("stroke", function(){
                 if(country === "Philippines"){
-                    return "#e41a1c";
+                    return "#5e3c99";
                 }
             })
             .on("mousemove", (event, d) => {  
@@ -802,7 +803,7 @@ CentralChart.prototype.update = function(country) {
             .attr("cy", yScale(self.worldData[i]["United Kingdom"]))
             .attr("fill", function(){
                 if(country === "United Kingdom"){
-                    return "#e41a1c";
+                    return "#5e3c99";
                 } else {
                     return "#FFDEAD";
                 }
@@ -816,7 +817,7 @@ CentralChart.prototype.update = function(country) {
             })
             .style("stroke", function(){
                 if(country === "United Kingdom"){
-                    return "#e41a1c";
+                    return "#5e3c99";
                 }
             })
             .on("mousemove", (event, d) => {  
@@ -842,7 +843,7 @@ CentralChart.prototype.update = function(country) {
             .attr("cy", yScale(self.worldData[i]["Portugal"]))
             .attr("fill", function(){
                 if(country === "Portugal"){
-                    return "#e41a1c";
+                    return "#5e3c99";
                 } else {
                     return "#FFDEAD";
                 }
@@ -856,7 +857,7 @@ CentralChart.prototype.update = function(country) {
             })
             .style("stroke", function(){
                 if(country === "Portugal"){
-                    return "#e41a1c";
+                    return "#5e3c99";
                 }
             })
             .on("mousemove", (event, d) => {  
@@ -882,7 +883,7 @@ CentralChart.prototype.update = function(country) {
             .attr("cy", yScale(self.worldData[i]["Mexico"]))
             .attr("fill", function(){
                 if(country === "Mexico"){
-                    return "#e41a1c";
+                    return "#5e3c99";
                 } else {
                     return "#FFDEAD";
                 }
@@ -896,7 +897,7 @@ CentralChart.prototype.update = function(country) {
             })
             .style("stroke", function(){
                 if(country === "Mexico"){
-                    return "#e41a1c";
+                    return "#5e3c99";
                 }
             })
             .on("mousemove", (event, d) => {  
@@ -922,7 +923,7 @@ CentralChart.prototype.update = function(country) {
             .attr("cy", yScale(self.worldData[i]["Bulgaria"]))
             .attr("fill", function(){
                 if(country === "Bulgaria"){
-                    return "#e41a1c";
+                    return "#5e3c99";
                 } else {
                     return "#FFDEAD";
                 }
@@ -936,7 +937,7 @@ CentralChart.prototype.update = function(country) {
             })
             .style("stroke", function(){
                 if(country === "Bulgaria"){
-                    return "#e41a1c";
+                    return "#5e3c99";
                 }
             })
             .on("mousemove", (event, d) => {  
@@ -962,7 +963,7 @@ CentralChart.prototype.update = function(country) {
             .attr("cy", yScale(self.worldData[i]["Poland"]))
             .attr("fill", function(){
                 if(country === "Poland"){
-                    return "#e41a1c";
+                    return "#5e3c99";
                 } else {
                     return "#FFDEAD";
                 }
@@ -976,7 +977,7 @@ CentralChart.prototype.update = function(country) {
             })
             .style("stroke", function(){
                 if(country === "Poland"){
-                    return "#e41a1c";
+                    return "#5e3c99";
                 }
             })
             .on("mousemove", (event, d) => {  
@@ -994,16 +995,17 @@ CentralChart.prototype.update = function(country) {
                     tooltip
                         .style("opacity", 0)
                 }) 
-
         nodes = node
             .enter()
             .append("circle")
-            .attr("cx", xScale(self.worldData[i]["Year"]))
+            .attr("cx", function(d, i){
+                return xScale(self.worldData[i]["Year"]);
+            })
             .attr("cy", yScale(self.worldData[i]["Korea, Dem. People’s Rep."]))
             .attr("fill", function(){
                 if(country === "Korea, Dem. People’s Rep."){
                     node.raise(); 
-                    return "#e41a1c";
+                    return "#5e3c99";
                 } else { 
                     return "#FFDEAD";
                 }
@@ -1017,12 +1019,19 @@ CentralChart.prototype.update = function(country) {
             })
             .style("stroke", function(){
                 if(country === "Korea, Dem. People’s Rep."){
-                    return "#e41a1c";
+                    return "#5e3c99";
                 }
             })
             .on("mousemove", (event, d) => {  
                 var year = 0; 
                 var population = 0; 
+
+                // for(var i = 0; i < self.worldData.length; i++){
+                //     console.log(self.worldData[i][country]); 
+                // }
+                // d3.csv("../data/korea.csv", function(data){
+                //     console.log(data.Year); 
+                // })
 
                 tooltip
                     .style("opacity", 1)
@@ -1043,7 +1052,7 @@ CentralChart.prototype.update = function(country) {
             .attr("cy", yScale(self.worldData[i]["Germany"]))
             .attr("fill", function(){
                 if(country === "Germany"){
-                    return "#e41a1c";
+                    return "#5e3c99";
                 } else {
                     return "#FFDEAD";
                 }
@@ -1057,7 +1066,7 @@ CentralChart.prototype.update = function(country) {
             })
             .style("stroke", function(){
                 if(country === "Germany"){
-                    return "#e41a1c";
+                    return "#5e3c99";
                 }
             })
             .on("mousemove", (event, d) => {  
@@ -1083,7 +1092,7 @@ CentralChart.prototype.update = function(country) {
             .attr("cy", yScale(self.worldData[i]["Venezuela, RB"]))
             .attr("fill", function(){
                 if(country === "Venezuela, RB"){
-                    return "#e41a1c";
+                    return "#5e3c99";
                 } else {
                     return "#FFDEAD";
                 }
@@ -1097,7 +1106,7 @@ CentralChart.prototype.update = function(country) {
             })
             .style("stroke", function(){
                 if(country === "Venezuela, RB"){
-                    return "#e41a1c";
+                    return "#5e3c99";
                 }
             })
             .on("mousemove", (event, d) => {  
@@ -1123,7 +1132,7 @@ CentralChart.prototype.update = function(country) {
             .attr("cy", yScale(self.worldData[i]["Italy"]))
             .attr("fill", function(){
                 if(country === "Italy"){
-                    return "#e41a1c";
+                    return "#5e3c99";
                 } else {
                     return "#FFDEAD";
                 }
@@ -1163,7 +1172,7 @@ CentralChart.prototype.update = function(country) {
             .attr("cy", yScale(self.worldData[i]["Ukraine"]))
             .attr("fill", function(){
                 if(country === "Ukraine"){
-                    return "#e41a1c";
+                    return "#5e3c99";
                 } else {
                     return "#FFDEAD";
                 }
@@ -1177,7 +1186,7 @@ CentralChart.prototype.update = function(country) {
             })
             .style("stroke", function(){
                 if(country === "Ukraine"){
-                    return "#e41a1c";
+                    return "#5e3c99";
                 }
             })
             .on("mousemove", (event, d) => {  
@@ -1203,7 +1212,7 @@ CentralChart.prototype.update = function(country) {
             .attr("cy", yScale(self.worldData[i]["Argentina"]))
             .attr("fill", function(){
                 if(country === "Argentina"){
-                    return "#e41a1c";
+                    return "#5e3c99";
                 } else {
                     return "#FFDEAD";
                 }
@@ -1217,7 +1226,7 @@ CentralChart.prototype.update = function(country) {
             })
             .style("stroke", function(){
                 if(country === "Argentina"){
-                    return "#e41a1c";
+                    return "#5e3c99";
                 }
             })
             .on("mousemove", (event, d) => {  
@@ -1243,7 +1252,7 @@ CentralChart.prototype.update = function(country) {
             .attr("cy", yScale(self.worldData[i]["Japan"]))
             .attr("fill", function(){
                 if(country === "Japan"){
-                    return "#e41a1c";
+                    return "#5e3c99";
                 } else {
                     return "#FFDEAD";
                 }
@@ -1257,7 +1266,7 @@ CentralChart.prototype.update = function(country) {
             })
             .style("stroke", function(){
                 if(country === "Japan"){
-                    return "#e41a1c";
+                    return "#5e3c99";
                 }
             })
             .on("mousemove", (event, d) => {  
@@ -1283,7 +1292,7 @@ CentralChart.prototype.update = function(country) {
             .attr("cy", yScale(self.worldData[i]["Australia"]))
             .attr("fill", function(){
                 if(country === "Australia"){
-                    return "#e41a1c";
+                    return "#5e3c99";
                 } else {
                     return "#FFDEAD";
                 }
@@ -1297,7 +1306,7 @@ CentralChart.prototype.update = function(country) {
             })
             .style("stroke", function(){
                 if(country === "Australia"){
-                    return "#e41a1c";
+                    return "#5e3c99";
                 }
             })
             .on("mousemove", (event, d) => {  
@@ -1324,7 +1333,7 @@ CentralChart.prototype.update = function(country) {
             .attr("cy", yScale(self.worldData[i]["Russian Federation"]))
             .attr("fill", function(){
                 if(country === "Russian Federation"){
-                    return "#e41a1c";
+                    return "#5e3c99";
                 } else {
                     return "#FFDEAD";
                 }
@@ -1338,7 +1347,7 @@ CentralChart.prototype.update = function(country) {
             })
             .style("stroke", function(){
                 if(country === "Russian Federation"){
-                    return "#e41a1c";
+                    return "#5e3c99";
                 }
             })
             .on("mousemove", (event, d) => {  
